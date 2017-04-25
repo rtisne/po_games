@@ -8,7 +8,7 @@ var storage = multer.diskStorage({
     cb(null, 'public/uploads/')
   },
   filename: function (req, file, cb) {
-    cb(null, file.fieldname + Date.now()+ '.' + file.originalname.split('.')[file.originalname.split('.').length -1])
+    cb(null, file.fieldname + Date.now() + '.' + file.originalname.split('.')[file.originalname.split('.').length -1])
   }
 })
 
@@ -25,13 +25,17 @@ var upload = multer({
 router.post('/', [upload.any(), function(req, res) {
   if(req.files.length > 0){
     var file = req.files[0];
-    Picture.addPicture(file,function(err,count){
-      if(err){
-        res.json(err);
-      } else{
-        res.json(file);
-      }
-    });
+    try{
+        Picture.addPicture(file,function(err,count){
+          if(err){
+            res.json(err);
+          } else{
+            res.json(file);
+          }
+        });
+    } catch(e){
+        return res.end();
+    }
   }
 }]);
 
