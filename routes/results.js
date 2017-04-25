@@ -4,8 +4,7 @@ var Result = require('../models/result');
 
 router.post('/',function(req,res,next){
   Result.addResult(req.body,function(err,count){
-    if(err)
-    {
+    if(err){
       res.json(err);
     }
     else{

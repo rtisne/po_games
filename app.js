@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 // include routes
 var members = require('./routes/members');
 var results = require('./routes/results');
+var pictures = require('./routes/pictures');
 
 // include Model for token
 var Token = require('./models/token');
@@ -22,6 +23,8 @@ app.use('/members', authentification);
 app.use('/members', members);
 app.use('/results', authentification);
 app.use('/results', results);
+app.use('/pictures', authentification);
+app.use('/pictures', pictures);
 
 
 // catch 404 and forward to error handler

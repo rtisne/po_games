@@ -18,7 +18,9 @@
 			"id": "c930855b-03bc-dd34-a782-6e18b34d7796",
 			"name": "Pictures",
 			"description": "",
-			"order": [],
+			"order": [
+				"7c89bdad-3441-0151-2c11-bc5acc3b372a"
+			],
 			"owner": 0
 		},
 		{
@@ -36,6 +38,34 @@
 	"owner": 0,
 	"public": false,
 	"requests": [
+		{
+			"id": "7c89bdad-3441-0151-2c11-bc5acc3b372a",
+			"headers": "x-access-token: D5B496DBEE4E272F788D9424925C9\n",
+			"url": "http://localhost:8090/pictures/",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "7e9eacf2-f594-3cd9-b762-c830e451c7dc",
+			"data": [
+				{
+					"key": "",
+					"value": "logo_octobre_bleu.png",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"name": "http://localhost:8090/pictures/",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1493130027770,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "c930855b-03bc-dd34-a782-6e18b34d7796"
+		},
 		{
 			"id": "b065825a-3b29-dabc-50cb-8428e11085f9",
 			"headers": "x-access-token: D5B496DBEE4E272F788D9424925C9\n",
@@ -70,23 +100,29 @@
 		},
 		{
 			"id": "c6950894-3761-a1f3-d15c-b4935d000ebd",
-			"headers": "x-access-token: D5B496DBEE4E272F788D9424925C9\nContent-Type: application/json\n",
-			"url": "http://localhost:8090/results",
+			"headers": "x-access-token: D5B496DBEE4E272F788D9424925C9\n",
+			"url": "http://localhost:8090/pictures/",
 			"preRequestScript": null,
 			"pathVariables": {},
 			"method": "POST",
-			"data": [],
-			"dataMode": "raw",
+			"data": [
+				{
+					"key": "photo",
+					"value": "logo_octobre_bleu.png",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
 			"version": 2,
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1493122573363,
+			"time": 1493125863643,
 			"name": "http://localhost:8090/results",
 			"description": "Insert result for a member",
 			"collectionId": "7e9eacf2-f594-3cd9-b762-c830e451c7dc",
-			"responses": [],
-			"rawModeData": "{\n\t\"member\": 1,\n\t\"score\": 4\n}"
+			"responses": []
 		},
 		{
 			"id": "dd8c919b-d0fe-d9a3-0e43-905c1d4b8f75",

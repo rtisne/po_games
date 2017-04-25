@@ -7,8 +7,7 @@ router.get('/',function(req,res,next){
     Member.getMembersWithReq(req.query.query,function(err,rows){
       if(err){
         res.json(err);
-      }
-      else{
+      }else{
         res.json(rows);
       }
     });
@@ -17,8 +16,7 @@ router.get('/',function(req,res,next){
     Member.getAllMembers(function(err,rows){
       if(err){
         res.json(err);
-      }
-      else{
+      }else{
         res.json(rows);
       }
     });
