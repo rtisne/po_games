@@ -28,7 +28,8 @@
 			"name": "Results",
 			"description": "",
 			"order": [
-				"c6950894-3761-a1f3-d15c-b4935d000ebd"
+				"c6950894-3761-a1f3-d15c-b4935d000ebd",
+				"6e925fa7-5949-0023-79ab-10fb58e73437"
 			],
 			"owner": 0,
 			"collectionId": "7e9eacf2-f594-3cd9-b762-c830e451c7dc"
@@ -38,6 +39,35 @@
 	"owner": 0,
 	"public": false,
 	"requests": [
+		{
+			"id": "6e925fa7-5949-0023-79ab-10fb58e73437",
+			"headers": "x-access-token: D5B496DBEE4E272F788D9424925C9\n",
+			"url": "http://localhost:8090/pictures/",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "POST",
+			"data": [
+				{
+					"key": "photo",
+					"value": "logo_octobre_bleu.png",
+					"type": "file",
+					"enabled": true
+				}
+			],
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1493125863643,
+			"name": "http://localhost:8090/results copy",
+			"description": "Insert result for a member",
+			"collectionId": "7e9eacf2-f594-3cd9-b762-c830e451c7dc",
+			"responses": [],
+			"isFromCollection": true,
+			"collectionRequestId": "c6950894-3761-a1f3-d15c-b4935d000ebd",
+			"folder": "87d4941c-f978-7b32-60c7-d804e77e30d1"
+		},
 		{
 			"id": "7c89bdad-3441-0151-2c11-bc5acc3b372a",
 			"headers": "x-access-token: D5B496DBEE4E272F788D9424925C9\n",
@@ -100,29 +130,23 @@
 		},
 		{
 			"id": "c6950894-3761-a1f3-d15c-b4935d000ebd",
-			"headers": "x-access-token: D5B496DBEE4E272F788D9424925C9\n",
-			"url": "http://localhost:8090/pictures/",
+			"headers": "x-access-token: D5B496DBEE4E272F788D9424925C9\nContent-Type: application/json\n",
+			"url": "http://localhost:8090/results",
 			"preRequestScript": null,
 			"pathVariables": {},
 			"method": "POST",
-			"data": [
-				{
-					"key": "photo",
-					"value": "logo_octobre_bleu.png",
-					"type": "file",
-					"enabled": true
-				}
-			],
-			"dataMode": "params",
+			"data": [],
+			"dataMode": "raw",
 			"version": 2,
 			"tests": null,
 			"currentHelper": "normal",
 			"helperAttributes": {},
-			"time": 1493125863643,
+			"time": 1493133098920,
 			"name": "http://localhost:8090/results",
 			"description": "Insert result for a member",
 			"collectionId": "7e9eacf2-f594-3cd9-b762-c830e451c7dc",
-			"responses": []
+			"responses": [],
+			"rawModeData": "{\n\t\"member\": 1,\n\t\"score\": 12\n}"
 		},
 		{
 			"id": "dd8c919b-d0fe-d9a3-0e43-905c1d4b8f75",
