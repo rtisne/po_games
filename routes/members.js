@@ -31,7 +31,6 @@ router.get('/',function(req,res,next){
     } catch(e){
         return res.end();
     }
-
   }
 });
 module.exports=router;
