@@ -46,6 +46,7 @@
 ## API
 
 * Requetes
+Les exemples de requêtes sont sous le dossier docs/
 
 | url | type | paramètres | retour |
 |------|-------|--------------|---------|
