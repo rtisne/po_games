@@ -4,24 +4,34 @@ var Member = require('../models/member');
 
 router.get('/',function(req,res,next){
   if(req.query.query){
-    Member.getMembersWithReq(req.query.query,function(err,rows){
-      if(err){
-        res.json(err);
-      }
-      else{
-        res.json(rows);
-      }
-    });
+    try{
+        Member.getMembersWithReq(req.query.query,function(err,rows){
+          if(err){
+            res.json(err);
+          }
+          else{
+            res.json(rows);
+          }
+        });
+    }catch(e){
+        return res.end();
+    }
+
   }
   else{
-    Member.getAllMembers(function(err,rows){
-      if(err){
-        res.json(err);
-      }
-      else{
-        res.json(rows);
-      }
-    });
+    try{
+        Member.getAllMembers(function(err,rows){
+          if(err){
+            res.json(err);
+          }
+          else{
+            res.json(rows);
+          }
+        });
+    } catch(e){
+        return res.end();
+    }
+
   }
 });
 module.exports=router;
