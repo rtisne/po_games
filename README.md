@@ -49,7 +49,7 @@
 Les exemples de requêtes sont sous le dossier docs/
 
 | url | type | Header | paramètres | retour |
-|------|-------|--------------|---------|
+|------|-----|--------|------------|---------|
 | /members | GET | token | | liste de tous les membres |
 | /members?query={query} | GET | token | | liste des membres repondant à la query |
 | /results | POST | token | result - id membre | ok ou fail |
