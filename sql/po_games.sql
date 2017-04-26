@@ -8,8 +8,7 @@ CREATE TABLE `games` (
   `mesure` int(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
-INSERT INTO `games` (`id`, `name`, `mesure`) VALUES
-(1, 'Smiley', 1);
+
 
 CREATE TABLE `identifications` (
   `picture` int(11) NOT NULL,
@@ -36,7 +35,8 @@ CREATE TABLE `mesures` (
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 INSERT INTO `mesures` (`id`, `name`) VALUES
-(1, 'number');
+(1, 'point'),
+(2, 'seconde');
 
 CREATE TABLE `pictures` (
   `id` int(11) NOT NULL,
@@ -94,3 +94,7 @@ ALTER TABLE `pictures`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 ALTER TABLE `games` ADD `min` INT NOT NULL AFTER `mesure`, ADD `max` INT NOT NULL AFTER `min`;
+
+
+INSERT INTO `games` (`id`, `name`, `mesure`, `min`, `max`) VALUES
+(1, 'Smiley', 1, 0, 6);

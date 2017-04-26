@@ -11,37 +11,39 @@
 ## Structure de la Base de données
 
 * games
-    - id              int auto-increment
-    - name         text
-    - mesure      external id
+    - id              -int auto-increment
+    - name         -text
+    - mesure      -external id
+    - min         -int (valeur min possible)
+    - max         -int (valeur max possible) 
 
 * mesures
-    - id              int auto-increment
-    - name         text                             (second, point ...)
+    - id              -int auto-increment
+    - name         -text                             (second, point ...)
 
 * members
-    - id               int auto-increment
-    - firstname    text
-    - lastname     text
-    - email          text
+    - id               -int auto-increment
+    - firstname    -text
+    - lastname     -text
+    - email          -text
 
 * results
-    - id_game     external id
-    - id_member external id
-    - score          int
+    - id_game     -external id
+    - id_member -external id
+    - score          -int
 
 * tokens
-    - token          text unique
-    - id game       external id
+    - token          -text unique
+    - id game       -external id
 
 * pictures
-    - id               int auto-increment
-    - path           text
+    - id               -int auto-increment
+    - path           -text
 
 * identifications
-    - id_picture   external id
-    - id_game     external id facultatif
-    - id_member external id
+    - id_picture   -external id
+    - id_game     -external id facultatif
+    - id_member -external id
 
 ## API
 
