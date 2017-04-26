@@ -21,7 +21,7 @@ app.use(bodyParser.json());
 app.use(expressValidator());
 app.use(express.static(__dirname + '/public'));
 app.set('views', path.join(__dirname, '/public/views'))
-app.set('view engine', 'jade');
+app.set('view engine', 'pug');
 
 // define and protect routes
 app.use('/api/members', authentification);

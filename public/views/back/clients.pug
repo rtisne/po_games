@@ -1,0 +1,41 @@
+html
+    head
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+    body
+        nav.navbar.navbar-inverse
+            div.navbar-header
+                a(href="/back/").navbar-brand= "< retour"
+                div.navbar-brand(style="width:50%;margin-left: auto; margin-right: auto;text-align:center;")= "Clients"
+        div.container
+            input#search.form-control(type='text' placeholder='Rechercher')
+            div.list-group
+
+    script.
+        window.localStorage.setItem('token', "#{token}");
+        $('#search').on('input', function() {
+            $.ajax({
+                url : '../api/members/',
+                dataType : 'json',
+                headers: {
+                    'x-access-token' : window.localStorage.getItem('token')
+                },
+                data : {
+                    'query' : $('input').val()
+                },
+                success : function(donnees){
+                    $('.list-group').empty();
+                    $.map(donnees, function(objet){
+                        $('.list-group').append("<button class='list-group-item'>" + objet.firstname + " " + objet.lastname + "</button>")
+                    });
+                }
+            });
+        });
+        //- $('#search').on('input', function() {
+        //-     $("#search").blur();
+        //- }
+        
+        
+        	

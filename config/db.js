@@ -3,7 +3,7 @@ var mysql=require('mysql');
 
 host:'localhost',
  user:'root',
- password:'',
+ password:'parissg',
  database:'po_games'
 
 });

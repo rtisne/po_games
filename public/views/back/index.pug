@@ -1,0 +1,21 @@
+html
+    head
+        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+    body
+        nav.navbar.navbar-inverse
+            div.navbar-header
+                a(href="/back/").navbar-brand= ""
+                div.navbar-brand(style="width:50%;margin: 0 auto;text-align:center;")= "Liste des jeux"
+        div.container
+            div.list-group
+                for game in games
+                    button.list-group-item(onclick="select("+ game.id +")")= game.name
+                else
+                    li sorry, no games!
+    script.
+        function select(id) {
+            window.location.href = '/back/clients?id='+id;
+        }
