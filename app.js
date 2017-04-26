@@ -2,7 +2,7 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
-
+var expressValidator = require('express-validator');
 // include routes
 var members = require('./routes/members');
 var results = require('./routes/results');
@@ -17,14 +17,17 @@ var app = express();
 // parse request
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
+app.use(expressValidator());
+app.set('view engine', 'jade');
 
 // define and protect routes
-app.use('/members', authentification);
-app.use('/members', members);
-app.use('/results', authentification);
-app.use('/results', results);
-app.use('/pictures', authentification);
-app.use('/pictures', pictures);
+app.use('/api/members', authentification);
+app.use('/api/members', members);
+app.use('/api/results', authentification);
+app.use('/api/results', results);
+app.use('/api/pictures', authentification);
+app.use('/api/pictures', pictures);
+
 
 
 // catch 404 and forward to error handler

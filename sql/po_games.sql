@@ -46,7 +46,7 @@ CREATE TABLE `pictures` (
 CREATE TABLE `results` (
   `game` int(11) NOT NULL,
   `member` int(11) NOT NULL,
-  `score` int(11) NOT NULL
+  `score` FLOAT(11) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 CREATE TABLE `tokens` (
