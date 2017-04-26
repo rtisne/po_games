@@ -1,5 +1,15 @@
 html
   head
-    title!= title
+    link(rel='stylesheet', href='../../bootstrap/css/bootstrap.min.css')
+    link(rel='stylesheet', href='../../bootstrap/css/bootstrap-responsive.min.css')
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
+    script(src='../../bootstrap/js/bootstrap.min.js')
+    meta(name='viewport' content='width=device-width, initial-scale=1')
   body
-    h1!= message
+    div.container
+      h1!= message
+      div.list-group
+        for game in games
+          button.list-group-item= game.name
+        else
+          li sorry, no games!

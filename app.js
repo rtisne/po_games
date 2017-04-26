@@ -8,6 +8,7 @@ var members = require('./routes/members');
 var results = require('./routes/results');
 var pictures = require('./routes/pictures');
 
+var back = require('./routes/back');
 // include Model for token
 var Token = require('./models/token');
 
@@ -18,6 +19,8 @@ var app = express();
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json());
 app.use(expressValidator());
+app.use(express.static(__dirname + '/public'));
+app.set('views', path.join(__dirname, '/public/views'))
 app.set('view engine', 'jade');
 
 // define and protect routes
@@ -27,6 +30,8 @@ app.use('/api/results', authentification);
 app.use('/api/results', results);
 app.use('/api/pictures', authentification);
 app.use('/api/pictures', pictures);
+
+app.use('/back', back);
 
 
 
