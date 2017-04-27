@@ -18,7 +18,29 @@ socket.on('connect', function(){
 socket.on('showClient', function(data){
     for(var i = 0; i < data.length ; i++){
         try{
-            $('#face'+i).attr("src", servUrl + data[i].path)
+            $('#face'+i).attr("src", servUrl + data[i].path) //colere, joie, neutre, surprise, tristesse
+            var imgName = '';
+            switch(data[i].path.split('_')[0].split("\\")[2]){
+                case 'colere':
+                    imgName = 'Angry.png'
+                    break;
+                case 'joie':
+                    imgName = 'Smiling.png'
+                    break;
+                case 'neutre':
+                    imgName = 'Neutral.png'
+                    break;
+                case 'surprise':
+                    imgName = 'Surprised.png'
+                    break;
+                case 'tristesse':
+                    imgName = 'Sad.png'
+                    break;
+                default:
+                    imgName = 'Angry.png'
+                    break;
+            }
+                $('#emo'+i).attr("src", servUrl + 'board/smile_icon/' + imgName)
         }catch(e){
             console.log(e)
         }

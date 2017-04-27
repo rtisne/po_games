@@ -9,7 +9,7 @@ pusher.initer = function (server) {
     console.log('\x1b[33m%s\x1b[0m', '~~ New board connected!')
     console.log('\x1b[33m%s\x1b[0m', '~~~~ Board id : ' + socket.id)
     console.log('\x1b[33m%s\x1b[0m', '~~~~ Hydrating board...')
-    var data = Result.getResults(function (err, rows) {
+    Result.getResults(function (err, rows) {
       if (!err) pusher.hydrate(socket, rows)
     })
 
