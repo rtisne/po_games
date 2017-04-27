@@ -24,7 +24,12 @@ router.post('/',function(req,res,next){
                   req.body.score = normalization(req.body.score, row.min, row.max);
                   Result.addResult(req.body,function(err,count){
                       if(err){
-                          res.json(err);
+                        if(err.code == "ER_DUP_ENTRY"){
+                          err.message = "Resultat déjà entrée";
+                        }
+
+                        console.log(err.message);
+                        res.json(err)
                       }
                       else{
                           res.json(req.body);

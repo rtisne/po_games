@@ -1,19 +1,30 @@
 html
     head
         link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        link(rel='stylesheet', href='../css/clients.css')
         script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
         script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
         meta(name='viewport' content='width=device-width, initial-scale=1')
     body
+        div.alert.alert-danger.alert-fixed(role='alert' style='display:none;') 
+          You have been signed in successfully!
+          
         nav.navbar.navbar-inverse
             div.navbar-header
                 a(href="/back/").navbar-brand= "< retour"
                 div.navbar-brand(style="width:50%;margin-left: auto; margin-right: auto;text-align:center;")= "Clients"
         div.container
+          div.search_zone
             input#search.form-control(type='text' placeholder='Rechercher')
             div.list-group
+          div.result(style='display:none;')
+            div.form-group
+              input.form-control(type='number' placeholder='Résultat' name='result')
+            div.form-group
+              button.btn.btn-primary.pull-right(type='submit') Valider
 
     script.
+        var listUsers = []; 
         window.localStorage.setItem('token', "#{token}");
         $('#search').on('input', function() {
             $.ajax({
@@ -23,19 +34,60 @@ html
                     'x-access-token' : window.localStorage.getItem('token')
                 },
                 data : {
-                    'query' : $('input').val()
+                    'query' : $('#search').val()
                 },
                 success : function(donnees){
                     $('.list-group').empty();
+                    listUsers = donnees;
                     $.map(donnees, function(objet){
-                        $('.list-group').append("<button class='list-group-item'>" + objet.firstname + " " + objet.lastname + "</button>")
+                        $('.list-group').append("<button onclick='select("+ objet.id +")' class='list-group-item'>" + objet.firstname + " " + objet.lastname + "</button>")
                     });
                 }
             });
         });
-        //- $('#search').on('input', function() {
-        //-     $("#search").blur();
-        //- }
         
+        $('#search').on('focus', function() {
+          $('#search').val('');
+          $('#search').data('id', '');
+          $('.result').hide();
+          $('.result').val('');
+        });
         
-        	
+        function select(id) {
+          var user = $.grep(listUsers, function(e) { return e.id == id })[0];
+          if(typeof user !== "undefined"){
+            $('#search').val(user.firstname + ' ' + user.lastname + ' (' + user.email + ')');
+            $('#search').data('id', user.id);
+            $('.list-group').empty();
+            $('.result').show();
+          }
+        }
+        $('button').on('click', function() {
+          var user = $.grep(listUsers, function(e) { return e.id ==   $('#search').data('id') })[0];
+          var result = $('input[name=result]').val();
+          if(typeof user !== "undefined" && typeof result !== "undefined" && result){
+            $.ajax({
+                url : '../api/results/',
+                dataType : 'json',
+                type : 'POST',
+                headers: {
+                    'x-access-token' : window.localStorage.getItem('token')
+                },
+                data : {
+                    'member': user.id,
+                    'score': result
+                },
+                success : function(donnees){
+                console.log(donnees);
+                  if(donnees.code){
+                    console.log("ici");
+                  }else{
+                    window.location.href = '/back/clients?id='+user.id;
+                  }
+                }
+            });
+          }else{
+          
+          }
+        });
+    
