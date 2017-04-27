@@ -22,13 +22,13 @@ app.use(expressValidator())
 app.use(express.static(__dirname + '/public'))
 app.set('views', path.join(__dirname, '/public/views'))
 app.set('view engine', 'pug')
-app.use('/board', express.static('/public/board'));
+app.use('/board', express.static('/public/board'))
 
-app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'));
-app.use('/js', express.static(__dirname + '/node_modules/jquery/dist'));
-app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
-app.use('/fonts', express.static(__dirname + '/node_modules/bootstrap/dist/fonts'));
-app.use('/public', express.static(__dirname + '/public'));
+app.use('/js', express.static(__dirname + '/node_modules/bootstrap/dist/js'))
+app.use('/js', express.static(__dirname + '/node_modules/jquery/dist'))
+app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'))
+app.use('/fonts', express.static(__dirname + '/node_modules/bootstrap/dist/fonts'))
+app.use('/public', express.static(__dirname + '/public'))
 
 // define and protect routes
 app.use('/api/members', authentification)

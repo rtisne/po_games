@@ -1,12 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style=" height: 100%;">
 <head>
     <meta charset="UTF-8">
     <title>Score Board - Sogeti</title>
-    <script type="text/javascript" src="socket.io.min.js"></script>
-    <script type="text/javascript" src="bundle.js"></script>
+    <script type="text/javascript" src="js/socket.io.min.js"></script>
+    <script type="text/javascript" src="js/bundle.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Faster+One|Kaushan+Script" rel="stylesheet">
 </head>
-<body>
+<body  style="background-image:url('img/bgi.jpg');min-height:100%;background-size:cover;background-repeat:no-repeat;background-position:center">
+<div >
+<div class="container-fluid" style="padding:30px" >
+    <!-- Example row of columns -->
+    <div class="row">
+        <div class="col-md-6">
+            <div class="row">
+        <div class="col-md-4 text-center">
+            <img class="rounded-circle" src="img/fouras.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2 style="font-family: 'Kaushan Script', cursive;font-size:30px">Le Questionnaire</h2>
+        </div>
+        <div class="col-md-4 text-center">
+            <img class="rounded-circle" src="img/smiley.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2 style="font-family: 'Covered By Your Grace', cursive;font-size:30px">Just Smile !</h2>
 
+        </div>
+        <div class="col-md-4 text-center">
+            <img class="rounded-circle" src="img/coursechat.jpg" alt="Generic placeholder image" width="140" height="140">
+            <h2 style="font-family: 'Faster One', cursive, cursive;font-size:20px">Course au château!</h2>
+        </div>
+            </div>
+    </div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <h2 style="font-size:30px">Vos plus beaux visages</h2>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img class="rounded-circle" id="face0" src="img/fouras.jpg" alt="Generic placeholder image" width="140" height="140">
+                    <h2 style="font-family: 'Kaushan Script', cursive;font-size:30px">Le Questionnaire</h2>
+                </div>
+                <div class="col-md-4 text-center">
+                    <img class="rounded-circle" id="face1" src="img/smiley.jpg" alt="Generic placeholder image" width="140" height="140">
+                    <h2 style="font-family: 'Covered By Your Grace', cursive;font-size:30px">Just Smile !</h2>
+
+                </div>
+                <div class="col-md-4 text-center">
+                    <img class="rounded-circle" id="face2" src="img/coursechat.jpg" alt="Generic placeholder image" width="140" height="140">
+                    <h2 style="font-family: 'Faster One', cursive, cursive;font-size:20px">Course au château!</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top:10px">
+
+
+    </div>
+    </div>
+
+
+</div> <!-- /container -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

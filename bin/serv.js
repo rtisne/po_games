@@ -8,8 +8,6 @@ var app = require('../app')
 var http = require('http')
 var pusher = require('./pusher')
 
-
-
 /**
  * Get port from environment and store in Express.
  */
@@ -28,7 +26,6 @@ server.on('error', onError)
 server.on('listening', onListening)
 
 pusher.initer(server)
-
 
 function normalizePort (val) {
   var port = parseInt(val, 10)
