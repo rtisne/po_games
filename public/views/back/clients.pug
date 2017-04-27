@@ -1,27 +1,39 @@
 html
     head
-        link(rel='stylesheet', href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/css/bootstrap.min.css')
+        script(src='/js/jquery.min.js')
+        script(src='/js/bootstrap.min.js')
         link(rel='stylesheet', href='../css/clients.css')
-        script(src='https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js')
-        script(src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js')
         meta(name='viewport' content='width=device-width, initial-scale=1')
     body
         div.alert.alert-danger.alert-fixed(role='alert' style='display:none;') 
-          You have been signed in successfully!
-          
+        div.alert.alert-success.alert-fixed(role='alert' style='display:none;')= "Le score a bien été enregistré"
         nav.navbar.navbar-inverse
             div.navbar-header
-                a(href="/back/").navbar-brand= "< retour"
-                div.navbar-brand(style="width:50%;margin-left: auto; margin-right: auto;text-align:center;")= "Clients"
+                a(href="/back/").navbar-brand
+                  span.glyphicon.glyphicon-menu-left(aria-hidden='true')
+                div.navbar-brand= "Score"
+                
         div.container
           div.search_zone
-            input#search.form-control(type='text' placeholder='Rechercher')
+            input#search.form-control(type='text' placeholder='Rechercher client')
             div.list-group
           div.result(style='display:none;')
             div.form-group
               input.form-control(type='number' placeholder='Résultat' name='result')
             div.form-group
               button.btn.btn-primary.pull-right(type='submit') Valider
+    
+        div#dupModal.modal.fade(tableindex='-1' role='dialog')
+          div.modal-dialog(role='dialog')
+            div.modal-content
+              div.modal-header
+                h4.modal-title= "Duplicat"
+              div.modal-body
+                p#messageError
+              div.modal-footer
+                button.btn.btn-default(type='button' onclick='selectionModal(false)')= "Non"
+                button.btn.btn-primary(type='button' onclick='selectionModal(true)')= "Oui"
 
     script.
         var listUsers = []; 
@@ -50,7 +62,6 @@ html
           $('#search').val('');
           $('#search').data('id', '');
           $('.result').hide();
-          $('.result').val('');
         });
         
         function select(id) {
@@ -59,35 +70,81 @@ html
             $('#search').val(user.firstname + ' ' + user.lastname + ' (' + user.email + ')');
             $('#search').data('id', user.id);
             $('.list-group').empty();
+            $('input[name=result]').val('');
             $('.result').show();
           }
         }
-        $('button').on('click', function() {
+        $('button[type=submit]').on('click', function() {
           var user = $.grep(listUsers, function(e) { return e.id ==   $('#search').data('id') })[0];
           var result = $('input[name=result]').val();
           if(typeof user !== "undefined" && typeof result !== "undefined" && result){
-            $.ajax({
-                url : '../api/results/',
-                dataType : 'json',
-                type : 'POST',
-                headers: {
-                    'x-access-token' : window.localStorage.getItem('token')
-                },
-                data : {
-                    'member': user.id,
-                    'score': result
-                },
-                success : function(donnees){
-                console.log(donnees);
-                  if(donnees.code){
-                    console.log("ici");
-                  }else{
-                    window.location.href = '/back/clients?id='+user.id;
+            if(Math.floor(result) == result && $.isNumeric(result)){
+              $.ajax({
+                  url : '../api/results/',
+                  dataType : 'json',
+                  type : 'POST',
+                  headers: {
+                      'x-access-token' : window.localStorage.getItem('token')
+                  },
+                  data : {
+                      'member': user.id,
+                      'score': result
+                  },
+                  success : function(donnees){
+                    if(donnees.code){
+                      if(donnees.code == "ER_DUP_ENTRY"){
+                        $('#messageError').html(user.firstname + ' ' + user.lastname + ' possède déjà un résultat pour ce jeu.  <br> Voulez vous le remplacer?');
+                        $('#dupModal').modal('show');
+                      }else{
+                        $('.alert-danger').text(donnees.message);
+                        $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
+                      }
+                    }else{
+                      $('.alert-success').fadeIn('fast').delay(2000).fadeOut('fast');
+                      $('#search').focus();
+                    }
                   }
-                }
-            });
+              });
+            }else{
+              $('.alert-danger').text("Entrez un entier");
+              $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
+            }
           }else{
-          
+            $('.alert-danger').text("Entrez le score");
+            $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
           }
         });
+        
+        function selectionModal(valid){
+          $('#dupModal').modal('hide');
+          if(valid){
+            var user = $.grep(listUsers, function(e) { return e.id ==   $('#search').data('id') })[0];
+            var result = $('input[name=result]').val();
+            if(typeof user !== "undefined" && typeof result !== "undefined" && result){
+              $.ajax({
+                  url : '../api/results/',
+                  dataType : 'json',
+                  type : 'PUT',
+                  headers: {
+                      'x-access-token' : window.localStorage.getItem('token')
+                  },
+                  data : {
+                      'member': user.id,
+                      'score': result
+                  },
+                  success : function(donnees){
+                    if(donnees.code){
+                      $('.alert-danger').text(donnees.message);
+                      $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
+                    }else{
+                      $('#search').focus();
+                      $('.alert-success').fadeIn('fast').delay(2000).fadeOut('fast');
+                    }
+                  }
+              });
+            }
+          }else{
+            $('#search').focus();
+          }
+        }
     

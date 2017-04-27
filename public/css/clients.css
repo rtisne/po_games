@@ -1,8 +1,15 @@
 .alert-fixed {
     position:fixed;
-    top: 0px;
+    bottom: 0px;
     left: 0px;
     width: 100%;
     z-index:9999;
-    border-radius:0px
+    border-radius:0px;
+    margin: 0;
+}
+
+input[type='text'],
+input[type='number'],
+textarea {
+  font-size: 16px;
 }

@@ -38,4 +38,33 @@ router.post('/', [upload.any(), function (req, res) {
   res.json('ok')
 }])
 
+router.get('/', function (req, res) {
+  var limit;
+  if (req.query.limit) {
+    req.checkQuery('limit', 'Invalid postparam').notEmpty().isInt();
+    var errors = req.validationErrors();
+    if (errors) {
+      res.send(errors);
+      return;
+    } else {
+      limit = req.query.limit
+    }
+  }else {
+    limit = 6
+  }
+  try {
+    Picture.getPictures(limit, function (err, row) {
+      console.log(row)
+      if (err) {
+        res.json(err)
+      }else{
+        res.json(row)
+      }
+    });
+  } catch (e) {
+    return res.end()
+  }
+
+})
+
 module.exports = router
