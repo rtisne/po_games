@@ -22,6 +22,7 @@ app.use(expressValidator())
 app.use(express.static(__dirname + '/public'))
 app.set('views', path.join(__dirname, '/public/views'))
 app.set('view engine', 'pug')
+app.use('/board', express.static('/public/board'));
 
 // define and protect routes
 app.use('/api/members', authentification)
