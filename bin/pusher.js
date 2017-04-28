@@ -28,7 +28,7 @@ pusher.initer = function (server) {
 }
 
 pusher.hydrate = function (socket, data) {
-  io.sockets.emit('hydrateClient', data)
+  socket.emit('hydrateClient', data)
 }
 
 pusher.requestShow = function (socket, data) {
