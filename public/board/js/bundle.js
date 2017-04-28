@@ -1,7 +1,7 @@
 /**
  * Created by remach on 27/04/2017.
  */
-var servUrl = 'http://127.0.0.1:8090/'
+var servUrl = 'http://soge.gala/'
 
 var socket = io(servUrl);
 socket.on('connect', function(){
