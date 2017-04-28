@@ -2,7 +2,7 @@
  * Created by remach on 27/04/2017.
  */
 var servUrl = 'http://soge.gala/'
-
+window.scoreJ1 = []
 var socket = io(servUrl);
 socket.on('connect', function(){
     console.log('%c Connected to back-end! ', 'background: #222; color: #bada55');
@@ -17,6 +17,12 @@ socket.on('connect', function(){
 
 socket.on('hydrateClient', function(data){
     console.log(data)
+    window.scoreJ1 = []
+    for(var i=0; i<data.length; i++){
+        if(data[i].game == 1){
+            window.scoreJ1.push(data[i])
+        }
+    }
 })
 
 socket.on('showClient', function(data){
