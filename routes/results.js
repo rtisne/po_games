@@ -24,7 +24,7 @@ router.post('/', function (req, res, next) {
                 var result = {code: 100, message: 'Le résultat doit être entre ' + row.min + ' et ' + row.max}
                 res.json(result)
               }
-              req.body.score = normalization(req.body.score, row.min, row.max)
+              //req.body.score = normalization(req.body.score, row.min, row.max)
               Result.addResult(req.body, function (err, count) {
                 if (err) {
                   var result = {code: err.code, message: 'Resultat déjà existant'}
@@ -65,7 +65,7 @@ router.put('/', function (req, res, next) {
                 var result = {code: 100, message: 'Le résultat doit être entre ' + row.min + ' et ' + row.max}
                 res.json(result)
               }
-              req.body.score = normalization(req.body.score, row.min, row.max)
+              //req.body.score = normalization(req.body.score, row.min, row.max)
               Result.updateResult(req.body, function (err, count) {
                 if (err) {
                   res.json(err)

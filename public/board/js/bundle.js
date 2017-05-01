@@ -3,11 +3,14 @@
  */
 var servUrl = 'http://soge.gala/'
 window.scoreJ1 = []
+window.scoreJ2 = []
+window.scoreJ3 = []
 var socket = io(servUrl);
 socket.on('connect', function(){
     console.log('%c Connected to back-end! ', 'background: #222; color: #bada55');
     console.log('%c Asking for new show images... ', 'background: #222; color: #ffda55');
     socket.emit("clientRequestShow", 3);
+    socket.emit("clientRequestRefresh");
     setInterval(function(){
         console.log('%c Asking for new show images... ', 'background: #222; color: #ffda55');
         socket.emit("clientRequestShow", {countPictures: 3});
@@ -16,11 +19,16 @@ socket.on('connect', function(){
 });
 
 socket.on('hydrateClient', function(data){
-    console.log(data)
     window.scoreJ1 = []
+    window.scoreJ2 = []
+    window.scoreJ3 = []
     for(var i=0; i<data.length; i++){
         if(data[i].game == 1){
-            window.scoreJ1.push(data[i])
+          window.scoreJ1.push(data[i]);
+        }else if(data[i].game == 2){
+          window.scoreJ2.push(data[i]);
+        }else if(data[i].game == 3){
+          window.scoreJ3.push(data[i]);
         }
     }
 })
