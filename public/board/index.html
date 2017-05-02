@@ -11,236 +11,64 @@
     <link href="css/style.css" rel="stylesheet" media="screen">
     <!-- TODO: choper en local! -->
     <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Faster+One|Kaushan+Script" rel="stylesheet">
-    <style>
-
-        /********* BLING **********/
-        .content ul{
-            border-radius: 20px;
-        }
-
-        .animate {
-            -moz-animation: flashIt 0.1s ease 1;
-            -webkit-animation: flashIt 0.1s ease 1;
-            animation: flashIt 0.1s ease 1;
-        }
-
-        .animate .countold{
-            -moz-animation: spinIt 0.3s ease 1;
-            -webkit-animation: spinIt 0.3s ease 1;
-            animation: spinIt 0.3s ease 1;
-        }
-
-
-        @-moz-keyframes flashIt {
-            100% { opacity: 0; background-color: #FFF;}
-        }
-        @-webkit-keyframes flashIt {
-            100% { opacity: 0; background-color: #FFF;}
-        }
-        @keyframes flashIt {
-            100% { opacity: 0; }
-        }
-
-        @-moz-keyframes spinIt {
-            20% {-moz-transform: rotate(-10deg)}
-            40% {-moz-transform: rotate(10deg)}
-            60% {-moz-transform: rotate(-10deg)}
-            80% {-moz-transform: rotate(10deg)}
-            100% {-moz-transform: rotate(-10deg)}
-        }
-        @-webkit-keyframes spinIt {
-            20% {-webkit-transform: rotate(-10deg)}
-            40% {-webkit-transform: rotate(10deg)}
-            60% {-webkit-transform: rotate(-10deg)}
-            80% {-webkit-transform: rotate(10deg)}
-            100% {-webkit-transform: rotate(-10deg)}
-        }
-        @keyframes spinIt {
-            20% {transform: rotate(-10deg)}
-            40% {transform: rotate(10deg)}
-            60% {transform: rotate(-10deg)}
-            80% {transform: rotate(10deg)}
-            100% {transform: rotate(-10deg)}
-        }
-    </style>
 
 </head>
 <body  style="min-height:100%;">
 <div class="section-2"><img class="image-2" src="img/logo.png">
 </div>
-<div class="w-row">
+<div class="w-row scoreboard">
     <div class="w-col w-col-4 contentSmile">
         <h3 class="heading">Just Smile</h3>
-        <!-- <ul class="leaderboard">
-            <li class="list-item w-clearfix">
-                <div class="text-block"><span class="text-span">1</span>
-                </div>
-                <div class="text-block-3"><span>Jean Dupond</span>
-                </div>
-                <div class="text-block-2"><span class="text-span-2">1450</span>
-                </div>
-            </li>
-            <li class="w-clearfix">
-                <div class="text-block"><span class="text-span">2</span>
-                </div>
-                <div class="text-block-3"><span>Jean Dupond</span>
-                </div>
-                <div class="text-block-2"><span class="text-span-2">1250</span>
-                </div>
-            </li>
-            <li class="w-clearfix">
-                <div class="text-block"><span class="text-span">3</span>
-                </div>
-                <div class="text-block-3"><span>Jean Dupond</span>
-                </div>
-                <div class="text-block-2"><span class="text-span-2">1050</span>
-                </div>
-            </li>
-            <li class="w-clearfix">
-                <div class="text-block"><span class="text-span">4</span>
-                </div>
-                <div class="text-block-3"><span>Jean Dupond</span>
-                </div>
-                <div class="text-block-2"><span class="text-span-2">890</span>
-                </div>
-            </li>
-        </ul> -->
     </div>
     <div class="w-col w-col-4 contentRace">
         <h3 class="heading">Course au château</h3>
-        <!-- <ul class="leaderboard">
-            <li class="w-clearfix">
-                <div class="text-block"><span class="text-span">1</span>
-                </div>
-                <div class="text-block-3"><span>Jean Dupond</span>
-                </div>
-                <div class="text-block-2"><span class="text-span-2">1450</span>
-                </div>
-            </li>
-            <li class="w-clearfix">
-                <div class="text-block"><span class="text-span">2</span>
-                </div>
-                <div class="text-block-3"><span>Jean Dupond</span>
-                </div>
-                <div class="text-block-2"><span class="text-span-2">1250</span>
-                </div>
-            </li>
-            <li class="w-clearfix">
-                <div class="text-block"><span class="text-span">3</span>
-                </div>
-                <div class="text-block-3"><span>Jean Dupond</span>
-                </div>
-                <div class="text-block-2"><span class="text-span-2">1050</span>
-                </div>
-            </li>
-            <li class="w-clearfix">
-                <div class="text-block"><span class="text-span">4</span>
-                </div>
-                <div class="text-block-3"><span>Jean Dupond</span>
-                </div>
-                <div class="text-block-2"><span class="text-span-2">890</span>
-                </div>
-            </li>
-        </ul> -->
     </div>
     <div class="w-col w-col-4 contentQuestion">
         <h3 class="heading">Questionnaire</h3>
-        <!-- <ul class="leaderboard">
-            <li class="w-clearfix">
-                <div class="text-block"><span class="text-span">1</span>
-                </div>
-                <div class="text-block-3"><span>Jean Dupond</span>
-                </div>
-                <div class="text-block-2"><span class="text-span-2">1450</span>
-                </div>
-            </li>
-            <li class="w-clearfix">
-                <div class="text-block"><span class="text-span">2</span>
-                </div>
-                <div class="text-block-3"><span>Jean Dupond</span>
-                </div>
-                <div class="text-block-2"><span class="text-span-2">1250</span>
-                </div>
-            </li>
-            <li class="w-clearfix">
-                <div class="text-block"><span class="text-span">3</span>
-                </div>
-                <div class="text-block-3"><span>Jean Dupond</span>
-                </div>
-                <div class="text-block-2"><span class="text-span-2">1050</span>
-                </div>
-            </li>
-            <li class="w-clearfix">
-                <div class="text-block"><span class="text-span">4</span>
-                </div>
-                <div class="text-block-3"><span>Jean Dupond</span>
-                </div>
-                <div class="text-block-2"><span class="text-span-2">890</span>
-                </div>
-            </li>
-        </ul> -->
     </div>
 </div>
 
 
+<div class="row faces">
+    <div class="col-md-8 row text-center" style="margin: 0 auto; margin-top: 30px;">
+        <h1 class="page_title">Vos plus belles têtes</h1>
+    </div>
+    <div class="col-md-10 row" style="margin: 0 auto;margin-top: 30px;">
+        <div class="col-md-3 text-center pictures">
+            <img style="position:absolute;z-index:3;right:10px;bottom:10px" id="emo0" width="50" height="50" src="img/silhouette.png" alt="Generic placeholder image">
+            <img class="rounded-circle img-fluid" id="face0" src="img/silhouette.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-3 text-center pictures">
+            <img style="position:absolute;z-index:3;right:10px;bottom:10px" id="emo1" width="50" height="50" src="img/silhouette.png" alt="Generic placeholder image">
+            <img class="rounded-circle img-fluid" id="face1" src="img/silhouette.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-3 text-center pictures">
+            <img style="position:absolute;z-index:3;right:10px;bottom:10px" id="emo2" width="50" height="50" src="img/silhouette.png" alt="Generic placeholder image">
+            <img class="rounded-circle img-fluid" id="face2" src="img/silhouette.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-3 text-center pictures">
+            <img style="position:absolute;z-index:3;right:10px;bottom:10px" id="emo3" width="50" height="50" src="img/silhouette.png" alt="Generic placeholder image">
+            <img class="rounded-circle img-fluid" id="face3" src="img/silhouette.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-3 text-center pictures">
+            <img style="position:absolute;z-index:3;right:10px;bottom:10px" id="emo4" width="50" height="50" src="img/silhouette.png" alt="Generic placeholder image">
+            <img class="rounded-circle img-fluid" id="face4" src="img/silhouette.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-3 text-center pictures">
+            <img style="position:absolute;z-index:3;right:10px;bottom:10px" id="emo5" width="50" height="50" src="img/silhouette.png" alt="Generic placeholder image">
+            <img class="rounded-circle img-fluid" id="face5" src="img/silhouette.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-3 text-center pictures">
+            <img style="position:absolute;z-index:3;right:10px;bottom:10px" id="emo6" width="50" height="50" src="img/silhouette.png" alt="Generic placeholder image">
+            <img class="rounded-circle img-fluid" id="face6" src="img/silhouette.png" alt="Generic placeholder image">
+        </div>
+        <div class="col-md-3 text-center pictures">
+            <img style="position:absolute;z-index:3;right:10px;bottom:10px" id="emo7" width="50" height="50" src="img/silhouette.png" alt="Generic placeholder image">
+            <img class="rounded-circle img-fluid" id="face7" src="img/silhouette.png" alt="Generic placeholder image">
+        </div>
+    </div>
 
-
-
-
-
-
-
-
-
-
-<!--<div class="container-fluid" style="padding:30px" >-->
-<!--&lt;!&ndash; Example row of columns &ndash;&gt;-->
-<!--<div class="row">-->
-<!--<div class="col-md-12">-->
-<!--<div class="row">-->
-<!--<div class="col-md-4 text-center">-->
-<!--<img class="rounded-circle" src="img/fouras.jpg" alt="Generic placeholder image" width="140" height="140">-->
-<!--<h2 style="font-family: 'Kaushan Script', cursive;font-size:30px">Le Questionnaire</h2>-->
-<!--<div class='leaderboard'>-->
-<!--<div class="content contentQuestion"></div>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="col-md-4 text-center">-->
-<!--<img class="rounded-circle" src="img/smiley.jpg" alt="Generic placeholder image" width="140" height="140">-->
-<!--<h2 style="font-family: 'Covered By Your Grace', cursive;font-size:30px">Just Smile !</h2>-->
-<!--<div class='leaderboard'>-->
-<!--<div class="content contentSmile"></div>-->
-<!--</div>-->
-<!--</div>-->
-<!--<div class="col-md-4 text-center">-->
-<!--<img class="rounded-circle" src="img/coursechat.jpg" alt="Generic placeholder image" width="140" height="140">-->
-<!--<h2 style="font-family: 'Faster One', cursive, cursive;font-size:20px">Course au château!</h2>-->
-<!--<div class='leaderboard'>-->
-<!--<div class="content contentRace"></div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--&lt;!&ndash; <div class="col-md-4">-->
-<!--<div class="row">-->
-<!--<div class="col-md-12 text-center">-->
-<!--<h2 style="font-size:30px">Vos plus beaux visages</h2>-->
-<!--</div>-->
-<!--<div class="row">-->
-<!--<div class="col-md-8 text-center" style="margin: 0 auto;">-->
-<!--<img style="position:absolute;z-index:3;right:10px;bottom:10px" id="emo0" width="50" height="50" src="img/silhouette.png" alt="Generic placeholder image">-->
-<!--<img class="rounded-circle img-fluid" id="face0" src="img/silhouette.png" alt="Generic placeholder image">-->
-<!--</div>-->
-<!--<div class="col-md-8 text-center" style="margin: 0 auto;">-->
-<!--<img style="position:absolute;z-index:3;right:10px;bottom:10px" id="emo1" width="50" height="50" src="img/silhouette.png" alt="Generic placeholder image">-->
-<!--<img class="rounded-circle img-fluid" id="face1" src="img/silhouette.png" alt="Generic placeholder image">-->
-<!--</div>-->
-<!--</div>-->
-<!--</div>-->
-<!--</div> &ndash;&gt;-->
-<!--</div>-->
-<!--</div>-->
-
+</div>
 
 
 </div> <!-- /container -->
@@ -257,6 +85,7 @@
             };
             this.callback = callback;
             this.config = $.extend(defaults, options);
+            this.firstWithData = true;
         }
 
         FakePoller.prototype.buildData = function(data) {
@@ -287,11 +116,22 @@
                     var datas = [];
             }
 
-            if(datas.length >= (this.config.limit*this.config.page)){
+            if(datas.length >= (this.config.limit*this.config.page) && !this.firstWithData){
                 this.config.page++;
-            }else{
+            }else if(!this.firstWithData){
+
                 this.config.page = 1;
+                this.stop();
+                var evt = new CustomEvent('scrollEnd');
+                window.dispatchEvent(evt);
+
+                return;
             }
+
+
+            if(datas.length > 0)
+                this.firstWithData = false;
+
             return datas.slice((this.config.page*this.config.limit-this.config.limit), (this.config.page*this.config.limit));
         };
 
@@ -389,10 +229,38 @@
 
     })(jQuery);
 
+    var smileGameBoard;
+    var questionGameBoard;
+    var raceGameBoard;
     $(document).ready(function ($) {
-        var smileGameBoard = new Leaderboard(".contentSmile", {limit:20,frequency:8, page:1, game:1});
-        var questionGameBoard = new Leaderboard(".contentQuestion", {limit:20,frequency:8, page:1, game:3});
-        var raceGameBoard = new Leaderboard(".contentRace", {limit:20,frequency:8, page:1, game:2});
+      socket.emit("clientRequestRefresh");
+      socket.emit("clientRequestShow", {countPictures: 8});
+        $('.faces').hide();
+        smileGameBoard = new Leaderboard(".contentSmile", {limit:10,frequency:8, page:1, game:1});
+        questionGameBoard = new Leaderboard(".contentQuestion", {limit:20,frequency:8, page:1, game:3});
+        raceGameBoard = new Leaderboard(".contentRace", {limit:20,frequency:8, page:1, game:2});
+    });
+
+    var numberEnd = 0;
+    window.addEventListener('scrollEnd', function () {
+        numberEnd++;
+        if(numberEnd >= 3){
+          numberEnd = 0;
+          socket.emit("clientRequestShow", {countPictures: 8});
+//          $('.scoreboard').hide("slide", { direction: "left" }, function() {
+//            $('.faces').show("slide", { direction: "right" });
+//          });
+          $('.scoreboard').hide();
+          $('.faces').show();
+          window.setTimeout(function () {
+            $('.scoreboard').show();
+            $('.faces').hide();
+            $('.leaderboard').remove()
+            smileGameBoard = new Leaderboard(".contentSmile", {limit:10,frequency:8, page:1, game:1});
+            questionGameBoard = new Leaderboard(".contentQuestion", {limit:20,frequency:8, page:1, game:3});
+            raceGameBoard = new Leaderboard(".contentRace", {limit:20,frequency:8, page:1, game:2});
+          }, 8000);
+        }
     });
 
 

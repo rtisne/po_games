@@ -103,5 +103,67 @@ li {
     margin-bottom:0px;
     padding-top: 5px;
     padding-bottom: 5px;
+}
 
+.page_title{
+    margin: 0 auto;
+}
+
+.pictures{
+    margin-bottom: 20px;
+}
+
+.faces{
+    width: 98%;
+}
+
+
+/********* BLING **********/
+.content ul{
+    border-radius: 20px;
+}
+
+.animate {
+    -moz-animation: flashIt 0.1s ease 1;
+    -webkit-animation: flashIt 0.1s ease 1;
+    animation: flashIt 0.1s ease 1;
+}
+
+.animate .countold{
+    -moz-animation: spinIt 0.3s ease 1;
+    -webkit-animation: spinIt 0.3s ease 1;
+    animation: spinIt 0.3s ease 1;
+}
+
+
+@-moz-keyframes flashIt {
+    100% { opacity: 0; background-color: #FFF;}
+}
+@-webkit-keyframes flashIt {
+    100% { opacity: 0; background-color: #FFF;}
+}
+@keyframes flashIt {
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes spinIt {
+    20% {-moz-transform: rotate(-10deg)}
+    40% {-moz-transform: rotate(10deg)}
+    60% {-moz-transform: rotate(-10deg)}
+    80% {-moz-transform: rotate(10deg)}
+    100% {-moz-transform: rotate(-10deg)}
+}
+@-webkit-keyframes spinIt {
+    20% {-webkit-transform: rotate(-10deg)}
+    40% {-webkit-transform: rotate(10deg)}
+    60% {-webkit-transform: rotate(-10deg)}
+    80% {-webkit-transform: rotate(10deg)}
+    100% {-webkit-transform: rotate(-10deg)}
+}
+@keyframes spinIt {
+    20% {transform: rotate(-10deg)}
+    40% {transform: rotate(10deg)}
+    60% {transform: rotate(-10deg)}
+    80% {transform: rotate(10deg)}
+    100% {transform: rotate(-10deg)}
 }

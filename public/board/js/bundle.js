@@ -11,11 +11,11 @@ socket.on('connect', function(){
     console.log('%c Asking for new show images... ', 'background: #222; color: #ffda55');
     socket.emit("clientRequestShow", 3);
     socket.emit("clientRequestRefresh");
-    setInterval(function(){
-        console.log('%c Asking for new show images... ', 'background: #222; color: #ffda55');
-        socket.emit("clientRequestShow", {countPictures: 3});
-    },
-    5000)
+    // setInterval(function(){
+    //     console.log('%c Asking for new show images... ', 'background: #222; color: #ffda55');
+    //     socket.emit("clientRequestShow", {countPictures: 4});
+    // },
+    // 5000)
 });
 
 socket.on('hydrateClient', function(data){
@@ -54,8 +54,14 @@ socket.on('showClient', function(data){
                 case 'tristesse':
                     imgName = 'Sad.png'
                     break;
+                case 'peur':
+                    imgName = 'Fear.png'
+                    break;
+                case 'degout':
+                    imgName = 'Sad.png'
+                    break;
                 default:
-                    imgName = 'Angry.png'
+                    imgName = 'disgust.png'
                     break;
             }
                 $('#emo'+i).attr("src", servUrl + 'board/smile_icon/' + imgName)
