@@ -1,7 +1,7 @@
 /**
  * Created by remach on 27/04/2017.
  */
-var servUrl = 'http://soge.gala/'
+var servUrl = 'http://localhost:8090/'
 window.scoreJ1 = []
 window.scoreJ2 = []
 window.scoreJ3 = []

@@ -9,6 +9,8 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/style.css" rel="stylesheet" media="screen">
+
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet" media="screen">
     <!-- TODO: choper en local! -->
     <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Faster+One|Kaushan+Script" rel="stylesheet">
 
@@ -74,6 +76,7 @@
 </div> <!-- /container -->
 <script src="js/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script src="jquery-ui/jquery-ui.js"></script>
 <script type="text/javascript">
     (function ($) {
         var FakePoller = function(options, callback){
@@ -124,7 +127,6 @@
                 this.stop();
                 var evt = new CustomEvent('scrollEnd');
                 window.dispatchEvent(evt);
-
                 return;
             }
 
@@ -247,14 +249,14 @@
         if(numberEnd >= 3){
           numberEnd = 0;
           socket.emit("clientRequestShow", {countPictures: 8});
-//          $('.scoreboard').hide("slide", { direction: "left" }, function() {
-//            $('.faces').show("slide", { direction: "right" });
-//          });
-          $('.scoreboard').hide();
-          $('.faces').show();
+          $('.scoreboard').hide("slide", { direction: "left" }, function() {
+            $('.faces').show("slide", { direction: "right" });
+          });
+
           window.setTimeout(function () {
-            $('.scoreboard').show();
-            $('.faces').hide();
+            $('.faces').hide("slide", { direction: "left" }, function() {
+                $('.scoreboard').show("slide", { direction: "right" });
+            });
             $('.leaderboard').remove()
             smileGameBoard = new Leaderboard(".contentSmile", {limit:10,frequency:8, page:1, game:1});
             questionGameBoard = new Leaderboard(".contentQuestion", {limit:20,frequency:8, page:1, game:3});
