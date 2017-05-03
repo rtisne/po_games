@@ -9,6 +9,9 @@ var Result = {
   },
   getResults: function (callback) {
     return db.query('SELECT results.game, members.firstname, members.lastname, results.score FROM results JOIN members ON results.member = members.id', callback)
+  },
+  getInfos: function (Result, callback) {
+    return db.query('SELECT games.id, games.name as game, members.firstname, members.lastname, results.score FROM results JOIN members ON results.member = members.id JOIN games on results.game = games.id WHERE game=' + Result.game + ' AND member=' + Result.member, callback)
   }
 }
 module.exports = Result

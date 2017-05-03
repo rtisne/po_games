@@ -8,12 +8,6 @@ pusher.initer = function (server) {
   io.on('connection', function (socket) {
     console.log('\x1b[33m%s\x1b[0m', '~~ New board connected!')
     console.log('\x1b[33m%s\x1b[0m', '~~~~ Board id : ' + socket.id)
-    // setInterval(function(){
-    //   console.log('\x1b[33m%s\x1b[0m', '~~~~ Hydrating board...')
-    //   Result.getResults(function (err, rows) {
-    //     if (!err) pusher.hydrate(socket, rows)
-    //   })
-    // }, 5000)
     socket.on('clientRequestRefresh', function () {
       Result.getResults(function (err, rows) {
         if (!err) pusher.hydrate(socket, rows)
@@ -41,4 +35,8 @@ pusher.hydrate = function (socket, data) {
 pusher.requestShow = function (socket, data) {
   console.log('\x1b[33m%s\x1b[0m', '~~~~ Sending pictures array...')
   socket.emit('showClient', data)
+}
+
+pusher.sendResult = function (data) {
+  io.emit('newScore', data)
 }

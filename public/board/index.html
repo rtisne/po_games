@@ -11,12 +11,22 @@
     <link href="css/style.css" rel="stylesheet" media="screen">
 
     <link href="jquery-ui/jquery-ui.css" rel="stylesheet" media="screen">
-    <!-- TODO: choper en local! -->
-    <link href="https://fonts.googleapis.com/css?family=Covered+By+Your+Grace|Faster+One|Kaushan+Script" rel="stylesheet">
 
 </head>
 <body  style="min-height:100%;">
-<div class="section-2"><img class="image-2" src="img/logo.png">
+<div class="modal-frame popup-score">
+    <div class="modal-inset">
+        <div class="modal-body">
+            <h3></h3>
+            <p>Venez battre son score</p>
+        </div>
+    </div>
+</div>
+<div class="section">
+    <img class="image" src="img/logo.png">
+    <div class="countdown">
+        Temps restant: <span class="time"></span>
+    </div>
 </div>
 <div class="w-row scoreboard">
     <div class="w-col w-col-4 contentSmile">
@@ -26,16 +36,16 @@
         <h3 class="heading">Course au château</h3>
     </div>
     <div class="w-col w-col-4 contentQuestion">
-        <h3 class="heading">Questionnaire</h3>
+        <h3 class="heading">Le Questionnaire</h3>
     </div>
 </div>
 
 
 <div class="row faces">
-    <div class="col-md-8 row text-center" style="margin: 0 auto; margin-top: 30px;">
+    <div class="col-md-8 row text-center" style="margin: 0 auto; margin-top: 40px;">
         <h1 class="page_title">Vos plus belles têtes</h1>
     </div>
-    <div class="col-md-10 row" style="margin: 0 auto;margin-top: 30px;">
+    <div class="col-md-12 row" style="margin: 0 auto;">
         <div class="col-md-3 text-center pictures">
             <img style="position:absolute;z-index:3;right:10px;bottom:10px" id="emo0" width="50" height="50" src="img/silhouette.png" alt="Generic placeholder image">
             <img class="rounded-circle img-fluid" id="face0" src="img/silhouette.png" alt="Generic placeholder image">
@@ -96,7 +106,7 @@
             for (var i = 0, len = data.length; i < len; i++) {
                 results.push({
                     rank: i+1,
-                    name: data[i].firstname + ' ' + data[i].lastname,
+                    name: capitalize(data[i].firstname) + ' ' + data[i].lastname,
                     count: data[i].score
                 });
             }
@@ -234,13 +244,23 @@
     var smileGameBoard;
     var questionGameBoard;
     var raceGameBoard;
+
+    var frequency = 6;
+    var limitPerPage = 20;
+
     $(document).ready(function ($) {
-      socket.emit("clientRequestRefresh");
       socket.emit("clientRequestShow", {countPictures: 8});
-        $('.faces').hide();
-        smileGameBoard = new Leaderboard(".contentSmile", {limit:10,frequency:8, page:1, game:1});
-        questionGameBoard = new Leaderboard(".contentQuestion", {limit:20,frequency:8, page:1, game:3});
-        raceGameBoard = new Leaderboard(".contentRace", {limit:20,frequency:8, page:1, game:2});
+      $('.faces').hide();
+      smileGameBoard = new Leaderboard(".contentSmile", {limit:limitPerPage,frequency:frequency, page:1, game:1});
+      questionGameBoard = new Leaderboard(".contentQuestion", {limit:limitPerPage,frequency:frequency, page:1, game:3});
+      raceGameBoard = new Leaderboard(".contentRace", {limit:limitPerPage,frequency:frequency, page:1, game:2});
+
+      $modal = $('.modal-frame');
+      $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e){
+        if($modal.hasClass('state-leave')) {
+          $modal.removeClass('state-leave');
+        }
+      });
     });
 
     var numberEnd = 0;
@@ -252,16 +272,17 @@
           $('.scoreboard').hide("slide", { direction: "left" }, function() {
             $('.faces').show("slide", { direction: "right" });
           });
-
+          socket.emit("clientRequestRefresh");
           window.setTimeout(function () {
+            socket.emit("clientRequestRefresh");
             $('.faces').hide("slide", { direction: "left" }, function() {
                 $('.scoreboard').show("slide", { direction: "right" });
             });
             $('.leaderboard').remove()
-            smileGameBoard = new Leaderboard(".contentSmile", {limit:10,frequency:8, page:1, game:1});
-            questionGameBoard = new Leaderboard(".contentQuestion", {limit:20,frequency:8, page:1, game:3});
-            raceGameBoard = new Leaderboard(".contentRace", {limit:20,frequency:8, page:1, game:2});
-          }, 8000);
+            smileGameBoard = new Leaderboard(".contentSmile", {limit:limitPerPage,frequency:frequency, page:1, game:1});
+            questionGameBoard = new Leaderboard(".contentQuestion", {limit:limitPerPage,frequency:frequency, page:1, game:3});
+            raceGameBoard = new Leaderboard(".contentRace", {limit:limitPerPage,frequency:frequency, page:1, game:2});
+          }, frequency*1000);
         }
     });
 

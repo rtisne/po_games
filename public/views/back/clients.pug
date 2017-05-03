@@ -20,7 +20,7 @@ html
             div.list-group
           div.result(style='display:none;')
             div.form-group
-              input.form-control(type='number' placeholder='Résultat' name='result')
+              input.result-input.form-control(type='number' placeholder='Résultat' name='result')
             div.form-group
               button.btn.btn-primary.pull-right(type='submit') Valider
     
@@ -39,23 +39,27 @@ html
         var listUsers = []; 
         window.localStorage.setItem('token', "#{token}");
         $('#search').on('input', function() {
-            $.ajax({
-                url : '../api/members/',
-                dataType : 'json',
-                headers: {
-                    'x-access-token' : window.localStorage.getItem('token')
-                },
-                data : {
-                    'query' : $('#search').val()
-                },
-                success : function(donnees){
-                    $('.list-group').empty();
-                    listUsers = donnees;
-                    $.map(donnees, function(objet){
-                        $('.list-group').append("<button onclick='select("+ objet.id +")' class='list-group-item'>" + objet.firstname + " " + objet.lastname + "</button>")
-                    });
-                }
-            });
+            if($('#search').val().length > 0){
+                $.ajax({
+                    url : '../api/members/',
+                    dataType : 'json',
+                    headers: {
+                        'x-access-token' : window.localStorage.getItem('token')
+                    },
+                    data : {
+                        'query' : $('#search').val()
+                    },
+                    success : function(donnees){
+                        $('.list-group').empty();
+                        listUsers = donnees;
+                        $.map(donnees, function(objet){
+                            $('.list-group').append("<button onclick='select("+ objet.id +")' class='list-group-item'>" + objet.firstname + " " + objet.lastname + "</button>")
+                        });
+                    }
+                });
+               } else {
+                $('.result').hide();
+               }
         });
         
         $('#search').on('focus', function() {
@@ -67,11 +71,15 @@ html
         function select(id) {
           var user = $.grep(listUsers, function(e) { return e.id == id })[0];
           if(typeof user !== "undefined"){
-            $('#search').val(user.firstname + ' ' + user.lastname + ' (' + user.email + ')');
+            $('#search').val(user.firstname + ' ' + user.lastname);
             $('#search').data('id', user.id);
             $('.list-group').empty();
             $('input[name=result]').val('');
             $('.result').show();
+            setTimeout(function(){
+                 $('.result-input').focus().select();
+            });
+
           }
         }
         $('button[type=submit]').on('click', function() {

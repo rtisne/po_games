@@ -9,13 +9,7 @@ var socket = io(servUrl);
 socket.on('connect', function(){
     console.log('%c Connected to back-end! ', 'background: #222; color: #bada55');
     console.log('%c Asking for new show images... ', 'background: #222; color: #ffda55');
-    socket.emit("clientRequestShow", 3);
     socket.emit("clientRequestRefresh");
-    // setInterval(function(){
-    //     console.log('%c Asking for new show images... ', 'background: #222; color: #ffda55');
-    //     socket.emit("clientRequestShow", {countPictures: 4});
-    // },
-    // 5000)
 });
 
 socket.on('hydrateClient', function(data){
@@ -31,6 +25,55 @@ socket.on('hydrateClient', function(data){
           window.scoreJ3.push(data[i]);
         }
     }
+})
+
+socket.on('newScore', function (data) {
+  data = data[0];
+  console.log(data);
+  switch (data.id){
+    case 1:
+      window.scoreJ1.push(data);
+      var category = getCategory(window.scoreJ1, data);
+      break
+    case 2:
+      window.scoreJ2.push(data);
+      var category = getCategory(window.scoreJ2, data);
+      break
+    case 3:
+      window.scoreJ3.push(data);
+      var category = getCategory(window.scoreJ3, data);
+      break
+    default:
+      var category = 3;
+      break
+  }
+  console.log(category);
+
+  $modal = $('.modal-frame');
+  switch (category){
+    case 0:
+      $modal.find('h3').text('Nouveau Record');
+      $modal.find('p').text(capitalize(data.firstname) + ' ' + data.lastname + ' a tout déchiré, avec un score de ' + data.score + ' au jeu ' + data.game);
+      break
+    case 1:
+      $modal.find('h3').text('Top 3');
+      $modal.find('p').text(capitalize(data.firstname) + ' ' + data.lastname + ' est dans le top 3, avec un score de ' + data.score + ' au jeu ' + data.game);
+      break
+    case 2:
+      $modal.find('h3').text('Pas mal');
+      $modal.find('p').text(capitalize(data.firstname) + ' ' + data.lastname + ' a obtenu un bon score de ' + data.score + ' au jeu ' + data.game);
+      break
+    case 4:
+      $modal.find('h3').text('Ouille');
+      $modal.find('p').text(capitalize(data.firstname) + ' ' + data.lastname + ' a tout raté, mauvais score de ' + data.score + ' au jeu ' + data.game);
+      break
+    default:
+      return
+  }
+  $modal.removeClass('state-leave').addClass('state-appear');
+  window.setTimeout(function () {
+    $modal.removeClass('state-appear').addClass('state-leave');
+  }, 3000);
 })
 
 socket.on('showClient', function(data){
@@ -72,3 +115,27 @@ socket.on('showClient', function(data){
 });
 
 socket.on('disconnect', function(){});
+
+
+function getCategory(array, element){
+  var score = array.sort(function(a, b) {
+    return b.score - a.score;
+  });
+  var index = score.indexOf(element);
+  if(index == 0){
+    return 0;
+  } else if (index < 3) {
+    return 1;
+  } else if ((index/score.length)*100 < 15) {
+    return 2;
+  } else if ((index/score.length)*100 > 80) {
+    return 4;
+  } else{
+    return 3;
+  }
+}
+
+function capitalize(str)
+{
+  return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+}

@@ -1,8 +1,8 @@
 var express = require('express')
-var expressValidator = require('express-validator')
 var router = express.Router()
 var Result = require('../models/result')
 var Game = require('../models/game')
+var pusher = require('../bin/pusher')
 
 router.post('/', function (req, res, next) {
   try {
@@ -24,13 +24,20 @@ router.post('/', function (req, res, next) {
                 var result = {code: 100, message: 'Le résultat doit être entre ' + row.min + ' et ' + row.max}
                 res.json(result)
               }
-              // req.body.score = normalization(req.body.score, row.min, row.max)
               Result.addResult(req.body, function (err, count) {
                 if (err) {
                   var result = {code: err.code, message: 'Resultat déjà existant'}
                   res.json(result)
                 } else {
-                  res.json(req.body)
+                  Result.getInfos(req.body, function (err, data) {
+                    if (err) {
+                      var result = {code: err.code, message: 'Problème en base de données'}
+                      res.json(result)
+                    } else {
+                      pusher.sendResult(data)
+                      res.json(req.body)
+                    }
+                  })
                 }
               })
             }
@@ -98,10 +105,5 @@ router.get('/', function (req, res, next) {
     return res.end()
   }
 })
-
-function normalization (value, min, max) {
-  var result = Math.round(((value - min) / (max - min)) * 100 * 100) / 100
-  return result
-}
 
 module.exports = router
