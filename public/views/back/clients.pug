@@ -16,13 +16,21 @@ html
                 
         div.container
           div.search_zone
-            input#search.form-control(type='text' placeholder='Rechercher client')
+            input#search.form-control(type='text' placeholder='Joueur 1')
             div.list-group
           div.result(style='display:none;')
             div.form-group
               input.result-input.form-control(type='number' placeholder='Résultat' name='result')
+            hr
+          div.search_zone
+            input#search.form-control(type='text' placeholder='Joueur 1')
+            div.list-group
+          div.result(style='display:none;')
             div.form-group
-              button.btn.btn-primary.pull-right(type='submit') Valider
+                input.result-input.form-control(type='number' placeholder='Résultat' name='result')
+            hr
+            div.form-group
+                button.btn.btn-primary.pull-right(type='submit') Valider
     
         div#dupModal.modal.fade(tableindex='-1' role='dialog')
           div.modal-dialog(role='dialog')
