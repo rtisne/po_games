@@ -23,10 +23,15 @@
     </div>
 </div>
 <div class="section">
+
+
     <img class="image" src="img/logo.png">
+
+
     <div class="countdown">
-        Temps restant: <span class="time"></span>
+        <p>Temps restant: <span id="time">XXminXX</span></p>
     </div>
+
 </div>
 <div class="w-row scoreboard">
     <div class="w-col w-col-4 contentSmile">
@@ -88,203 +93,299 @@
 <script src="js/bootstrap.min.js"></script>
 <script src="jquery-ui/jquery-ui.js"></script>
 <script type="text/javascript">
-    (function ($) {
-        var FakePoller = function(options, callback){
-            var defaults = {
-                frequency: 60,
-                limit: 3,
-                page: 1,
-                game: 0
-            };
-            this.callback = callback;
-            this.config = $.extend(defaults, options);
-            this.firstWithData = true;
+  (function ($) {
+    var FakePoller = function (options, callback) {
+      var defaults = {
+        frequency: 60,
+        limit: 3,
+        page: 1,
+        game: 0
+      }
+      this.callback = callback
+      this.config = $.extend(defaults, options)
+      this.firstWithData = true
+    }
+
+    FakePoller.prototype.buildData = function (data) {
+      var results = []
+      for (var i = 0, len = data.length; i < len; i++) {
+        results.push({
+          rank: i + 1,
+          name: data[i].lastname + ' ' + capitalize(data[i].firstname),
+          count: data[i].score,
+          date: data[i].date
+        })
+      }
+      return results
+    }
+
+    FakePoller.prototype.processData = function () {
+      socket.emit('clientRequestRefresh')
+      switch (this.config.game) {
+        case 1:
+          var datas = this.buildData(this.sortData(window.scoreJ1))
+          break
+        case 2:
+          var datas = this.buildData(this.sortData(window.scoreJ2))
+          break
+        case 3:
+          var datas = this.buildData(this.sortData(window.scoreJ3))
+          break
+        default:
+          var datas = []
+      }
+
+      if (datas.length >= (this.config.limit * this.config.page) && !this.firstWithData) {
+        this.config.page++
+      } else if (!this.firstWithData) {
+
+        this.config.page = 1
+        this.stop()
+        var evt = new CustomEvent('scrollEnd')
+        window.dispatchEvent(evt)
+        return
+      }
+
+      if (datas.length > 0)
+        this.firstWithData = false
+
+      return datas.slice((this.config.page * this.config.limit - this.config.limit), (this.config.page * this.config.limit))
+    };
+
+    FakePoller.prototype.sortData = function (data) {
+      return data.sort(function (a, b) {
+        return b.score - a.score
+      })
+    }
+    FakePoller.prototype.start = function () {
+      var _this = this
+      this.interval = setInterval((function () {
+        _this.callback(_this.processData())
+      }), this.config.frequency * 1000)
+      this.callback(this.processData())
+      return this
+    }
+    FakePoller.prototype.stop = function () {
+      clearInterval(this.interval)
+      return this
+    }
+    window.FakePoller = FakePoller
+
+    var Leaderboard = function (elemId, options) {
+      var _this = this
+      var defaults = {
+        limit: 3,
+        frequency: 15,
+        page: 1,
+        game: 0
+      }
+      this.currentItem = 0
+      this.currentCount = 0
+      this.config = $.extend(defaults, options)
+
+      this.$elem = $(elemId)
+      if (!this.$elem.length)
+        this.$elem = $('<div>').appendTo($('body'))
+
+      this.list = []
+      this.$content = $('<ul class="leaderboard">')
+      this.$elem.append(this.$content)
+
+      this.poller = new FakePoller({
+        frequency: this.config.frequency,
+        limit: this.config.limit,
+        page: this.config.page,
+        game: this.config.game
+      }, function (data) {
+        if (data) {
+          if (_this.currentCount != data.length) {
+            _this.buildElements(_this.$content, data.length)
+          }
+          _this.currentCount = data.length
+          _this.data = data
+          if (typeof _this.list[0] !== 'undefined')
+            _this.list[0].$item.addClass('animate')
         }
+      })
+      this.poller.start()
+    };
 
-        FakePoller.prototype.buildData = function(data) {
-            var results = [];
-            for (var i = 0, len = data.length; i < len; i++) {
-                results.push({
-                    rank: i+1,
-                    name: capitalize(data[i].firstname) + ' ' + data[i].lastname,
-                    count: data[i].score
-                });
-            }
-            return results;
-        };
+    Leaderboard.prototype.buildElements = function ($ul, elemSize) {
+      var _this = this
+      $ul.empty()
+      this.list = []
 
-        FakePoller.prototype.processData = function() {
-            socket.emit("clientRequestRefresh");
-            switch (this.config.game) {
-                case 1:
-                    var datas = this.buildData(this.sortData(window.scoreJ1));
-                    break;
-                case 2:
-                    var datas = this.buildData(this.sortData(window.scoreJ2));
-                    break;
-                case 3:
-                    var datas = this.buildData(this.sortData(window.scoreJ3));
-                    break;
-                default:
-                    var datas = [];
-            }
+      for (var i = 0; i < elemSize; i++) {
+        var item = $('<li class="w-clearfix">')
+          .on('animationend webkitAnimationEnd oAnimationEnd', eventAnimationEnd.bind(this))
+          .appendTo($ul)
+        this.list.push({
+          $item: item,
+          $rank: $('<span class="rank"></span> ').appendTo(item),
+          $name: $('<span class="name"></span>').appendTo(item),
+          $count: $('<span class="count"></span>').appendTo(item)
+        })
+      }
 
-            if(datas.length >= (this.config.limit*this.config.page) && !this.firstWithData){
-                this.config.page++;
-            }else if(!this.firstWithData){
-
-                this.config.page = 1;
-                this.stop();
-                var evt = new CustomEvent('scrollEnd');
-                window.dispatchEvent(evt);
-                return;
-            }
-
-
-            if(datas.length > 0)
-                this.firstWithData = false;
-
-            return datas.slice((this.config.page*this.config.limit-this.config.limit), (this.config.page*this.config.limit));
-        };
-
-        FakePoller.prototype.sortData = function(data) {
-            return data.sort(function(a, b) {
-                return b.score - a.score;
-            });
-        };
-        FakePoller.prototype.start = function() {
-            var _this = this;
-            this.interval = setInterval((function() {
-                _this.callback(_this.processData());
-            }), this.config.frequency * 1000);
-            this.callback(this.processData());
-            return this;
-        };
-        FakePoller.prototype.stop = function() {
-            clearInterval(this.interval);
-            return this;
-        };
-        window.FakePoller = FakePoller;
-
-        var Leaderboard = function (elemId, options) {
-            var _this = this;
-            var defaults = {
-                limit:3,
-                frequency:15,
-                page: 1,
-                game: 0
-            };
-            this.currentItem = 0;
-            this.currentCount = 0;
-            this.config = $.extend(defaults,options);
-
-            this.$elem = $(elemId);
-            if (!this.$elem.length)
-                this.$elem = $('<div>').appendTo($('body'));
-
-            this.list = [];
-            this.$content = $('<ul class="leaderboard">');
-            this.$elem.append(this.$content);
-
-            this.poller = new FakePoller({frequency: this.config.frequency, limit: this.config.limit, page: this.config.page, game: this.config.game}, function (data) {
-                if (data) {
-                    if(_this.currentCount != data.length){
-                        _this.buildElements(_this.$content,data.length);
-                    }
-                    _this.currentCount = data.length;
-                    _this.data = data;
-                    if(typeof _this.list[0] !== 'undefined')
-                        _this.list[0].$item.addClass('animate');
-                }
-            });
-            this.poller.start();
-        };
-
-        Leaderboard.prototype.buildElements = function($ul,elemSize){
-            var _this = this;
-            $ul.empty();
-            this.list = [];
-
-            for (var i = 0; i < elemSize; i++) {
-                var item = $('<li class="w-clearfix">')
-                    .on("animationend webkitAnimationEnd oAnimationEnd",eventAnimationEnd.bind(this) )
-                    .appendTo($ul);
-                this.list.push({
-                    $item: item,
-                    $rank:  $('<span class="rank"></span> ').appendTo(item),
-                    $name:  $('<span class="name"></span>').appendTo(item),
-                    $count: $('<span class="count"></span>').appendTo(item)
-                });
-            }
-
-            function eventAnimationEnd (evt){
-                this.list[this.currentItem].$rank.text(_this.data[this.currentItem].rank);
-                this.list[this.currentItem].$name.text(_this.data[this.currentItem].name);
-                this.list[this.currentItem].$count.text(_this.data[this.currentItem].count);
-                this.list[this.currentItem].$item.removeClass('animate');
-                this.currentItem = this.currentItem >= this.currentCount - 1 ? 0 : this.currentItem + 1;
-                if (this.currentItem != 0) {
-                    this.list[this.currentItem].$item.addClass('animate');
-                }
-            }
-        };
-
-        Function.prototype.bind = function(){
-            var fn = this, args = Array.prototype.slice.call(arguments),
-                object = args.shift();
-            return function(){
-                return fn.apply(object,args.concat(Array.prototype.slice.call(arguments)));
-            };
-        };
-
-        window.Leaderboard = Leaderboard;
-
-    })(jQuery);
-
-    var smileGameBoard;
-    var questionGameBoard;
-    var raceGameBoard;
-
-    var frequency = 6;
-    var limitPerPage = 20;
-
-    $(document).ready(function ($) {
-      socket.emit("clientRequestShow", {countPictures: 8});
-      $('.faces').hide();
-      smileGameBoard = new Leaderboard(".contentSmile", {limit:limitPerPage,frequency:frequency, page:1, game:1});
-      questionGameBoard = new Leaderboard(".contentQuestion", {limit:limitPerPage,frequency:frequency, page:1, game:3});
-      raceGameBoard = new Leaderboard(".contentRace", {limit:limitPerPage,frequency:frequency, page:1, game:2});
-
-      $modal = $('.modal-frame');
-      $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function(e){
-        if($modal.hasClass('state-leave')) {
-          $modal.removeClass('state-leave');
+      function eventAnimationEnd (evt) {
+        var date = new Date(Date.parse(_this.data[this.currentItem].date))
+        if (date > dateAdd(Date(), 'second', -newSinceSec)) {
+          this.list[this.currentItem].$count[0].className += ' new'
         }
-      });
-    });
-
-    var numberEnd = 0;
-    window.addEventListener('scrollEnd', function () {
-        numberEnd++;
-        if(numberEnd >= 3){
-          numberEnd = 0;
-          socket.emit("clientRequestShow", {countPictures: 8});
-          $('.scoreboard').hide("slide", { direction: "left" }, function() {
-            $('.faces').show("slide", { direction: "right" });
-          });
-          socket.emit("clientRequestRefresh");
-          window.setTimeout(function () {
-            socket.emit("clientRequestRefresh");
-            $('.faces').hide("slide", { direction: "left" }, function() {
-                $('.scoreboard').show("slide", { direction: "right" });
-            });
-            $('.leaderboard').remove()
-            smileGameBoard = new Leaderboard(".contentSmile", {limit:limitPerPage,frequency:frequency, page:1, game:1});
-            questionGameBoard = new Leaderboard(".contentQuestion", {limit:limitPerPage,frequency:frequency, page:1, game:3});
-            raceGameBoard = new Leaderboard(".contentRace", {limit:limitPerPage,frequency:frequency, page:1, game:2});
-          }, frequency*1000);
+        this.list[this.currentItem].$rank.text(_this.data[this.currentItem].rank)
+        this.list[this.currentItem].$name.text(_this.data[this.currentItem].name)
+        this.list[this.currentItem].$count.text(_this.data[this.currentItem].count)
+        this.list[this.currentItem].$item.removeClass('animate')
+        this.currentItem = this.currentItem >= this.currentCount - 1 ? 0 : this.currentItem + 1
+        if (this.currentItem != 0) {
+          this.list[this.currentItem].$item.addClass('animate')
         }
-    });
+      }
+    };
+
+    Function.prototype.bind = function () {
+      var fn = this, args = Array.prototype.slice.call(arguments),
+        object = args.shift()
+      return function () {
+        return fn.apply(object, args.concat(Array.prototype.slice.call(arguments)))
+      }
+    }
+
+    window.Leaderboard = Leaderboard
+
+  })(jQuery);
+
+  var smileGameBoard
+  var questionGameBoard
+  var raceGameBoard
+
+  var frequency = 6
+  var limitPerPage = 20
+  var newSinceSec = 60
+
+  $(document).ready(function ($) {
+    socket.emit('dateLimit')
+    socket.emit('clientRequestShow', {countPictures: 8})
+    $('.faces').hide()
+    smileGameBoard = new Leaderboard('.contentSmile', {limit: limitPerPage, frequency: frequency, page: 1, game: 1})
+    questionGameBoard = new Leaderboard('.contentQuestion', {
+      limit: limitPerPage,
+      frequency: frequency,
+      page: 1,
+      game: 3
+    })
+    raceGameBoard = new Leaderboard('.contentRace', {limit: limitPerPage, frequency: frequency, page: 1, game: 2})
+
+    $modal = $('.modal-frame')
+    $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function (e) {
+      if ($modal.hasClass('state-leave')) {
+        $modal.removeClass('state-leave')
+      }
+    })
+  });
+
+  var numberEnd = 0
+  window.addEventListener('scrollEnd', function () {
+    numberEnd++
+    if (numberEnd >= 3) {
+      numberEnd = 0
+      socket.emit('clientRequestShow', {countPictures: 8})
+      $('.scoreboard').hide('slide', {direction: 'left'}, function () {
+        $('.faces').show('slide', {direction: 'right'})
+      })
+      socket.emit('clientRequestRefresh')
+      window.setTimeout(function () {
+        socket.emit('clientRequestRefresh')
+        $('.faces').hide('slide', {direction: 'left'}, function () {
+          $('.scoreboard').show('slide', {direction: 'right'})
+        })
+        $('.leaderboard').remove()
+        smileGameBoard = new Leaderboard('.contentSmile', {
+          limit: limitPerPage,
+          frequency: frequency,
+          page: 1,
+          game: 1
+        })
+        questionGameBoard = new Leaderboard('.contentQuestion', {
+          limit: limitPerPage,
+          frequency: frequency,
+          page: 1,
+          game: 3
+        })
+        raceGameBoard = new Leaderboard('.contentRace', {limit: limitPerPage, frequency: frequency, page: 1, game: 2})
+      }, frequency * 1000)
+    }
+  })
+
+  function getTimeRemaining (endtime) {
+    var t = Date.parse(endtime) - Date.parse(new Date())
+    var seconds = Math.floor((t / 1000) % 60)
+    var minutes = Math.floor((t / 1000 / 60) % 60)
+    var hours = Math.floor((t / (1000 * 60 * 60)) % 24)
+    var days = Math.floor(t / (1000 * 60 * 60 * 24))
+    return {
+      'total': t,
+      'days': days,
+      'hours': minTwoDigits(hours),
+      'minutes': minTwoDigits(minutes),
+      'seconds': minTwoDigits(seconds)
+    }
+  }
+
+  function initializeClock (id, endtime) {
+    var clock = document.getElementById(id)
+    var timeinterval = setInterval(function () {
+      var t = getTimeRemaining(endtime)
+      clock.innerHTML = t.minutes + 'min' + t.seconds
+      if (t.total <= 0) {
+        clearInterval(timeinterval)
+      }
+    }, 1000)
+  }
+
+  function minTwoDigits (n) {
+    return (n < 10 ? '0' : '') + n
+  }
+
+  function dateAdd (date, interval, units) {
+    var ret = new Date(date) //don't change original date
+    var checkRollover = function () { if (ret.getDate() != date.getDate()) ret.setDate(0)}
+    switch (interval.toLowerCase()) {
+      case 'year'   :
+        ret.setFullYear(ret.getFullYear() + units)
+        checkRollover()
+        break
+      case 'quarter':
+        ret.setMonth(ret.getMonth() + 3 * units)
+        checkRollover()
+        break
+      case 'month'  :
+        ret.setMonth(ret.getMonth() + units)
+        checkRollover()
+        break
+      case 'week'   :
+        ret.setDate(ret.getDate() + 7 * units)
+        break
+      case 'day'    :
+        ret.setDate(ret.getDate() + units)
+        break
+      case 'hour'   :
+        ret.setTime(ret.getTime() + units * 3600000)
+        break
+      case 'minute' :
+        ret.setTime(ret.getTime() + units * 60000)
+        break
+      case 'second' :
+        ret.setTime(ret.getTime() + units * 1000)
+        break
+      default       :
+        ret = undefined
+        break
+    }
+    return ret
+  }
+
+
 
 
 </script>

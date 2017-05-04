@@ -8,7 +8,7 @@ var storage = multer.diskStorage({
     cb(null, 'public/uploads/')
   },
   filename: function (req, file, cb) {
-    cb(null, file.originalname.split('.')[file.originalname.split('.').length - 2] + '_' + file.fieldname + Date.now() + '.' + file.originalname.split('.')[file.originalname.split('.').length - 1])
+    cb(null, file.originalname.split('.')[file.originalname.split('.').length - 2] + '_' + file.fieldname + Date.now() + Math.floor(Math.random() * 100000) + '.' + file.originalname.split('.')[file.originalname.split('.').length - 1])
   }
 })
 
@@ -39,6 +39,7 @@ router.post('/', [upload.any(), function (req, res) {
 }])
 
 router.get('/', function (req, res) {
+  console.log('Receive Image')
   var limit
   if (req.query.limit) {
     req.checkQuery('limit', 'Invalid postparam').notEmpty().isInt()

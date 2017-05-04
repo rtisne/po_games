@@ -53,7 +53,7 @@ html
                         $('.list-group').empty();
                         listUsers = donnees;
                         $.map(donnees, function(objet){
-                            $('.list-group').append("<button onclick='select("+ objet.id +")' class='list-group-item'>" + objet.firstname + " " + objet.lastname + "</button>")
+                            $('.list-group').append("<button onclick='select("+ objet.id +")' class='list-group-item'>" + objet.lastname + " " + capitalize(objet.firstname) +"</button>")
                         });
                     }
                 });
@@ -71,7 +71,7 @@ html
         function select(id) {
           var user = $.grep(listUsers, function(e) { return e.id == id })[0];
           if(typeof user !== "undefined"){
-            $('#search').val(user.firstname + ' ' + user.lastname);
+            $('#search').val(user.lastname + ' ' + capitalize(user.firstname));
             $('#search').data('id', user.id);
             $('.list-group').empty();
             $('input[name=result]').val('');
@@ -101,7 +101,7 @@ html
                   success : function(donnees){
                     if(donnees.code){
                       if(donnees.code == "ER_DUP_ENTRY"){
-                        $('#messageError').html(user.firstname + ' ' + user.lastname + ' possède déjà un résultat pour ce jeu.  <br> Voulez vous le remplacer?');
+                        $('#messageError').html(user.lastname + ' ' + capitalize(user.firstname) + ' possède déjà un résultat pour ce jeu.  <br> Voulez vous le remplacer?');
                         $('#dupModal').modal('show');
                       }else{
                         $('.alert-danger').text(donnees.message);
@@ -122,6 +122,10 @@ html
             $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
           }
         });
+
+        function capitalize(str){
+          return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+        }
         
         function selectionModal(valid){
           $('#dupModal').modal('hide');

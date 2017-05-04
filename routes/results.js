@@ -26,6 +26,7 @@ router.post('/', function (req, res, next) {
               }
               Result.addResult(req.body, function (err, count) {
                 if (err) {
+                  console.log(err)
                   var result = {code: err.code, message: 'Resultat déjà existant'}
                   res.json(result)
                 } else {

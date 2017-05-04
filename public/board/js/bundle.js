@@ -95,13 +95,13 @@ socket.on('showClient', function(data){
                     imgName = 'Surprised.png'
                     break;
                 case 'tristesse':
-                    imgName = 'Sad.png'
+                  imgName = 'Crying.png'
                     break;
                 case 'peur':
                     imgName = 'Fear.png'
                     break;
                 case 'degout':
-                    imgName = 'Sad.png'
+                  imgName = 'disgust.png'
                     break;
                 default:
                     imgName = 'disgust.png'
@@ -113,6 +113,10 @@ socket.on('showClient', function(data){
         }
     }
 });
+
+socket.on('dateLimit', function (data) {
+  initializeClock('time', data[0].date)
+})
 
 socket.on('disconnect', function(){});
 

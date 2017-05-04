@@ -43,30 +43,30 @@ body{
     text-align: center;
 }
 
-.image {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-}
-
 .section {
-    background-color: #ed4732;
-    text-align: center;
-    display:flex;
-    align-items: center;
-    justify-content: center;
+    background-color: #EF4527;
+    height: 68px;
 }
 
 .image {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.countdown{
+    float: right;
+    padding-right: 5%;
+    height: 100%;
 }
 
-.countdown{
-    margin-right: 10%;
-
+.countdown > p {
+    height: 100%;
+    line-height: 68px;
+    white-space: nowrap;
+    color: white;
+    font-size: 16px;
 }
 
 .heading {
@@ -143,6 +143,22 @@ li {
 
 .faces{
     width: 98%;
+}
+
+.new::before {
+    content: "new";
+    color: red;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 160%;
+    animation: blinker 2s linear infinite;
+    margin-right: 4px;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
 }
 
 
