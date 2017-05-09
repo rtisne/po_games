@@ -29,6 +29,7 @@ app.use('/js', express.static(__dirname + '/node_modules/jquery/dist'))
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'))
 app.use('/fonts', express.static(__dirname + '/node_modules/bootstrap/dist/fonts'))
 app.use('/public', express.static(__dirname + '/public'))
+app.use('/images', express.static(__dirname + '/public/board/images'))
 
 // define and protect routes
 app.use('/api/members', authentification)

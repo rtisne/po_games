@@ -3,168 +3,285 @@ html
         link(rel='stylesheet', href='/css/bootstrap.min.css')
         script(src='/js/jquery.min.js')
         script(src='/js/bootstrap.min.js')
+        script(src='/board/bootstrap-notify/bootstrap-notify.js')
         link(rel='stylesheet', href='../css/clients.css')
         meta(name='viewport' content='width=device-width, initial-scale=1')
     body
-        div.alert.alert-danger.alert-fixed(role='alert' style='display:none;') 
+        div.alert.alert-danger.alert-fixed(role='alert' style='display:none;')
         div.alert.alert-success.alert-fixed(role='alert' style='display:none;')= "Le score a bien été enregistré"
         nav.navbar.navbar-inverse
             div.navbar-header
                 a(href="/back/").navbar-brand
-                  span.glyphicon.glyphicon-menu-left(aria-hidden='true')
+                    span.glyphicon.glyphicon-menu-left(aria-hidden='true')
                 div.navbar-brand= "Score"
-                
+
         div.container
-          div.search_zone
-            input#search.form-control(type='text' placeholder='Joueur 1')
-            div.list-group
-          div.result(style='display:none;')
-            div.form-group
-              input.result-input.form-control(type='number' placeholder='Résultat' name='result')
+            div.playerOne(data-search=1)
+                h4= "Joueur 1"
+                div.search_zone
+                    input.search.form-control(type='text' placeholder='Joueur 1')
+                    div.list-group
+                    div.result(style='display:none;')
+                        div.form-group
+                            input.result-input.form-control(type='number' placeholder='Résultat' name='result')
             hr
-          div.search_zone
-            input#search.form-control(type='text' placeholder='Joueur 1')
-            div.list-group
-          div.result(style='display:none;')
-            div.form-group
-                input.result-input.form-control(type='number' placeholder='Résultat' name='result')
+            div.playerTwo(data-search=2)
+                h4= "Joueur 2"
+                div.search_zone
+                    input.search.form-control(type='text' placeholder='Joueur 2')
+                    div.list-group
+                    div.result(style='display:none;')
+                        div.form-group
+                            input.result-input.form-control(type='number' placeholder='Résultat' name='result')
             hr
             div.form-group
                 button.btn.btn-primary.pull-right(type='submit') Valider
-    
+
         div#dupModal.modal.fade(tableindex='-1' role='dialog')
-          div.modal-dialog(role='dialog')
-            div.modal-content
-              div.modal-header
-                h4.modal-title= "Duplicat"
-              div.modal-body
-                p#messageError
-              div.modal-footer
-                button.btn.btn-default(type='button' onclick='selectionModal(false)')= "Non"
-                button.btn.btn-primary(type='button' onclick='selectionModal(true)')= "Oui"
+            div.modal-dialog(role='dialog')
+                div.modal-content
+                    div.modal-header
+                        h4.modal-title= "Duplicat"
+                    div.modal-body
+                        p#messageError
+                    div.modal-footer
+                        button.btn.btn-default#no(type='button')= "Non"
+                        button.btn.btn-primary#yes(type='button')= "Oui"
 
     script.
-        var listUsers = []; 
-        window.localStorage.setItem('token', "#{token}");
-        $('#search').on('input', function() {
-            if($('#search').val().length > 0){
-                $.ajax({
-                    url : '../api/members/',
-                    dataType : 'json',
-                    headers: {
-                        'x-access-token' : window.localStorage.getItem('token')
-                    },
-                    data : {
-                        'query' : $('#search').val()
-                    },
-                    success : function(donnees){
-                        $('.list-group').empty();
-                        listUsers = donnees;
-                        $.map(donnees, function(objet){
-                            $('.list-group').append("<button onclick='select("+ objet.id +")' class='list-group-item'>" + objet.lastname + " " + capitalize(objet.firstname) +"</button>")
-                        });
-                    }
-                });
-               } else {
-                $('.result').hide();
-               }
-        });
-        
-        $('#search').on('focus', function() {
-          $('#search').val('');
-          $('#search').data('id', '');
-          $('.result').hide();
-        });
-        
-        function select(id) {
-          var user = $.grep(listUsers, function(e) { return e.id == id })[0];
-          if(typeof user !== "undefined"){
-            $('#search').val(user.lastname + ' ' + capitalize(user.firstname));
-            $('#search').data('id', user.id);
-            $('.list-group').empty();
-            $('input[name=result]').val('');
-            $('.result').show();
-            setTimeout(function(){
-                 $('.result-input').focus().select();
-            });
+      var listUsers = [];
+      window.localStorage.setItem('token', "#{token}");
 
-          }
-        }
-        $('button[type=submit]').on('click', function() {
-          var user = $.grep(listUsers, function(e) { return e.id ==   $('#search').data('id') })[0];
-          var result = $('input[name=result]').val();
-          if(typeof user !== "undefined" && typeof result !== "undefined" && result){
-            if(Math.floor(result) == result && $.isNumeric(result)){
-              $.ajax({
-                  url : '../api/results/',
-                  dataType : 'json',
-                  type : 'POST',
-                  headers: {
-                      'x-access-token' : window.localStorage.getItem('token')
-                  },
-                  data : {
-                      'member': user.id,
-                      'score': result
-                  },
-                  success : function(donnees){
-                    if(donnees.code){
-                      if(donnees.code == "ER_DUP_ENTRY"){
-                        $('#messageError').html(user.lastname + ' ' + capitalize(user.firstname) + ' possède déjà un résultat pour ce jeu.  <br> Voulez vous le remplacer?');
-                        $('#dupModal').modal('show');
-                      }else{
-                        $('.alert-danger').text(donnees.message);
-                        $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
-                      }
-                    }else{
-                      $('.alert-success').fadeIn('fast').delay(2000).fadeOut('fast');
-                      $('#search').focus();
-                    }
-                  }
+      $('.search').on('input', function() {
+        var search = $(this).parents("[data-search]:first").data('search');
+        var element = $(this);
+        if($(this).val().length > 0){
+          $.ajax({
+            url : '../api/members/',
+            dataType : 'json',
+            headers: {
+              'x-access-token' : window.localStorage.getItem('token')
+            },
+            data : {
+              'query' : $(this).val()
+            },
+            success : function(donnees){
+              element.parents("[data-search]:first").find('.list-group').empty()
+              listUsers = donnees;
+              $.map(donnees, function(objet){
+                element.parents("[data-search]:first").find('.list-group').append("<button onclick='select("+ objet.id +", " + search + ")' class='list-group-item'>" + objet.lastname + " " + capitalize(objet.firstname) +"</button>")
               });
-            }else{
-              $('.alert-danger').text("Entrez un entier");
-              $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
             }
+          });
+        }
+      });
+
+      $('.search').on('focus', function() {
+        clean($(this));
+      });
+
+      function clean(element){
+        element.val('');
+        element.data('id', '');
+        element.parents("[data-search]:first").find('.result').hide();
+      }
+
+      function select(id, search) {
+        var user = $.grep(listUsers, function(e) { return e.id == id })[0];
+        if(typeof user !== "undefined"){
+          var input = $('[data-search="' + search + '"]').find('.search');
+          input.val(user.lastname + ' ' + capitalize(user.firstname));
+          input.data('id', user.id);
+          $('.list-group').empty();
+          $('[data-search="' + search + '"]').find('input[name=result]').val('');
+          $('[data-search="' + search + '"]').find('.result').show();
+          setTimeout(function(){
+            $('[data-search="' + search + '"]').find('.result-input').focus().select();
+          });
+
+        }
+      }
+
+      var buffer = new Buffer(exec);
+
+      $('button[type=submit]').on('click', function() {
+        var user1 = {
+          id: $('.playerOne').find('.search').data('id'),
+          name: $('.playerOne').find('.search').val(),
+          result: $('.playerOne').find('input[name=result]').val()
+        };
+
+        if (typeof user1.id !== "undefined" && typeof user1.result !== "undefined" && user1.result) {
+          if (Math.floor(user1.result) == user1.result && $.isNumeric(user1.result)) {
+            buffer.append(user1);
           }else{
-            $('.alert-danger').text("Entrez le score");
+            $('.alert-danger').text("Entrez un entier pour le premier joueur");
             $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
+            return;
+          }
+        }
+
+        var user2 = {
+          id: $('.playerTwo').find('.search').data('id'),
+          name: $('.playerTwo').find('.search').val(),
+          result: $('.playerTwo').find('input[name=result]').val()
+        };
+        if (typeof user2.id !== "undefined" && typeof user2.result !== "undefined" && user2.result) {
+          if (Math.floor(user2.result) == user2.result && $.isNumeric(user2.result)) {
+            buffer.append(user2);
+          } else {
+            $('.alert-danger').text("Entrez un entier pour le deuxième joueur");
+            $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
+            return;
+          }
+        }
+        buffer.launch();
+      });
+
+
+      function Buffer (handler) {
+        var queue = [];
+
+        function run () {
+          var callback = function () {
+            if (queue.length > 0) {
+              run();
+            }
+          }
+          handler(queue.shift(), callback);
+        }
+
+        this.launch = function(){
+          run();
+        }
+        this.append = function (task) {
+          queue.push(task);
+        }
+      }
+
+
+      function exec(user, callback){
+        $.ajax({
+          url: '../api/results/',
+          dataType: 'json',
+          type: 'POST',
+          async: false,
+          headers: {
+            'x-access-token': window.localStorage.getItem('token')
+          },
+          data: {
+            'member': user.id,
+            'score': user.result,
+            'name': user.name
+          },
+          success: function (donnees) {
+            if (donnees.code) {
+              if (donnees.code == "ER_DUP_ENTRY") {
+                console.log("Duplicat");
+                $('#messageError').html(user.name + ' possède déjà un résultat pour ce jeu.  <br> Voulez vous le remplacer?');
+                $('#dupModal').data('user', user);
+                $('#dupModal').modal('show');
+                $(document).on("click", '#no', function(){$(document).off("click", '#no');console.log("No Clik");selectionModal(false, callback);});
+                $(document).on("click", '#yes', function(){$(document).off("click", '#yes');selectionModal(true, callback);});
+
+              } else {
+                $('.alert-danger').text(donnees.message);
+                $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
+              }
+            } else {
+              $.notify({
+                message: 'Le score de ' + donnees.name + ' a bien été enregistré'
+              }, {
+                type: 'success',
+                allow_dismiss: 'false',
+                position: 'absolute',
+                placement: {
+                  from: "bottom",
+                },
+                timer: 2000,
+                animate: {
+                  enter: 'animated fadeInDown',
+                  exit: 'animated fadeOutUp'
+                },
+              });
+              if($('.playerOne').find('.search').data('id') == donnees.member){
+                clean($('.playerOne').find('.search'));
+              }else{
+                clean($('.playerTwo').find('.search'));
+              }
+              callback();
+            }
           }
         });
+      }
 
-        function capitalize(str){
-          return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-        }
-        
-        function selectionModal(valid){
-          $('#dupModal').modal('hide');
-          if(valid){
-            var user = $.grep(listUsers, function(e) { return e.id ==   $('#search').data('id') })[0];
-            var result = $('input[name=result]').val();
-            if(typeof user !== "undefined" && typeof result !== "undefined" && result){
-              $.ajax({
-                  url : '../api/results/',
-                  dataType : 'json',
-                  type : 'PUT',
-                  headers: {
-                      'x-access-token' : window.localStorage.getItem('token')
-                  },
-                  data : {
-                      'member': user.id,
-                      'score': result
-                  },
-                  success : function(donnees){
-                    if(donnees.code){
-                      $('.alert-danger').text(donnees.message);
-                      $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
-                    }else{
-                      $('#search').focus();
-                      $('.alert-success').fadeIn('fast').delay(2000).fadeOut('fast');
-                    }
-                  }
-              });
-            }
-          }else{
-            $('#search').focus();
+      function capitalize(str){
+        return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+      }
+
+      function selectionModal(valid, callback){
+        var user = $('#dupModal').data('user');
+        $('#dupModal').modal('hide');
+        if (valid) {
+          console.log("Yes Button");
+          console.log("User : ", user);
+          if (typeof user !== "undefined" && typeof user.result !== "undefined" && user.result) {
+            $.ajax({
+              url: '../api/results/',
+              dataType: 'json',
+              type: 'PUT',
+              async: false,
+              headers: {
+                'x-access-token': window.localStorage.getItem('token')
+              },
+              data: {
+                'member': user.id,
+                'score': user.result,
+                'name': user.name
+              },
+              success: function (donnees) {
+                console.log("Replacement Ok");
+                if (donnees.code) {
+                  $('.alert-danger').text(donnees.message);
+                  $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
+                } else {
+                  $.notify({
+                    message: 'Le score de ' + donnees.name + ' a bien été enregistré'
+                  }, {
+                    type: 'success',
+                    allow_dismiss: 'false',
+                    position: 'absolute',
+                    placement: {
+                      from: "bottom",
+                    },
+                    timer: 2000,
+                    animate: {
+                      enter: 'animated fadeInDown',
+                      exit: 'animated fadeOutUp'
+                    },
+                  });
+                }
+                if ($('.playerOne').find('.search').data('id') == donnees.member) {
+                  clean($('.playerOne').find('.search'));
+                } else {
+                  clean($('.playerTwo').find('.search'));
+                }
+                window.setTimeout(function () {
+                  callback();
+                  return;
+                }, 500)
+              }
+            });
           }
+        } else {
+          if ($('.playerOne').find('.search').data('id') == user.id) {
+            clean($('.playerOne').find('.search'));
+          } else {
+            clean($('.playerTwo').find('.search'));
+          }
+          window.setTimeout(function () {
+            callback();
+            return;
+          }, 500)
         }
-    
+      }

@@ -5,6 +5,7 @@
     <title>Score Board - Sogeti</title>
     <script type="text/javascript" src="js/socket.io.min.js"></script>
     <script type="text/javascript" src="js/bundle.js"></script>
+    <script type="text/javascript" src="js/date.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -14,25 +15,26 @@
 
 </head>
 <body  style="min-height:100%;">
+
+<!--Score Alert-->
 <div class="modal-frame popup-score">
     <div class="modal-inset">
         <div class="modal-body">
             <h3></h3>
-            <p>Venez battre son score</p>
+            <p></p>
         </div>
     </div>
 </div>
+
+<!--Header-->
 <div class="section">
-
-
     <img class="image" src="img/logo.png">
-
-
     <div class="countdown">
         <p>Temps restant: <span id="time">XXminXX</span></p>
     </div>
-
 </div>
+
+<!--Leaderboard-->
 <div class="w-row scoreboard">
     <div class="w-col w-col-4 contentSmile">
         <h3 class="heading">Just Smile</h3>
@@ -45,8 +47,8 @@
     </div>
 </div>
 
-
-<div class="row faces">
+<!--Faces-->
+<div class="row faces" style="display:none;">
     <div class="col-md-8 row text-center" style="margin: 0 auto; margin-top: 40px;">
         <h1 class="page_title">Vos plus belles têtes</h1>
     </div>
@@ -87,6 +89,13 @@
 
 </div>
 
+<!--Photograph images-->
+<div class="row photograph" style="display:none;">
+    <div class="box">
+        <img src="">
+    </div>
+
+</div
 
 </div> <!-- /container -->
 <script src="js/jquery.min.js"></script>
@@ -104,6 +113,7 @@
       this.callback = callback
       this.config = $.extend(defaults, options)
       this.firstWithData = true
+      this.toEnd = false
     }
 
     FakePoller.prototype.buildData = function (data) {
@@ -146,8 +156,7 @@
         return
       }
 
-      if (datas.length > 0)
-        this.firstWithData = false
+      this.firstWithData = false
 
       return datas.slice((this.config.page * this.config.limit - this.config.limit), (this.config.page * this.config.limit))
     };
@@ -264,9 +273,9 @@
   var newSinceSec = 60
 
   $(document).ready(function ($) {
+    socket.emit('getImage')
     socket.emit('dateLimit')
     socket.emit('clientRequestShow', {countPictures: 8})
-    $('.faces').hide()
     smileGameBoard = new Leaderboard('.contentSmile', {limit: limitPerPage, frequency: frequency, page: 1, game: 1})
     questionGameBoard = new Leaderboard('.contentQuestion', {
       limit: limitPerPage,
@@ -296,94 +305,35 @@
       socket.emit('clientRequestRefresh')
       window.setTimeout(function () {
         socket.emit('clientRequestRefresh')
+        socket.emit('getImage')
         $('.faces').hide('slide', {direction: 'left'}, function () {
-          $('.scoreboard').show('slide', {direction: 'right'})
+          $('.photograph').show('slide', {direction: 'right'})
         })
-        $('.leaderboard').remove()
-        smileGameBoard = new Leaderboard('.contentSmile', {
-          limit: limitPerPage,
-          frequency: frequency,
-          page: 1,
-          game: 1
-        })
-        questionGameBoard = new Leaderboard('.contentQuestion', {
-          limit: limitPerPage,
-          frequency: frequency,
-          page: 1,
-          game: 3
-        })
-        raceGameBoard = new Leaderboard('.contentRace', {limit: limitPerPage, frequency: frequency, page: 1, game: 2})
+        window.setTimeout(function () {
+          socket.emit('clientRequestRefresh')
+          $('.photograph').hide('slide', {direction: 'left'}, function () {
+            $('.scoreboard').show('slide', {direction: 'right'})
+          })
+          $('.leaderboard').remove()
+          smileGameBoard = new Leaderboard('.contentSmile', {
+            limit: limitPerPage,
+            frequency: frequency,
+            page: 1,
+            game: 1
+          })
+          questionGameBoard = new Leaderboard('.contentQuestion', {
+            limit: limitPerPage,
+            frequency: frequency,
+            page: 1,
+            game: 3
+          })
+          raceGameBoard = new Leaderboard('.contentRace', {limit: limitPerPage, frequency: frequency, page: 1, game: 2})
+        }, frequency * 1000)
+
+
       }, frequency * 1000)
     }
   })
-
-  function getTimeRemaining (endtime) {
-    var t = Date.parse(endtime) - Date.parse(new Date())
-    var seconds = Math.floor((t / 1000) % 60)
-    var minutes = Math.floor((t / 1000 / 60) % 60)
-    var hours = Math.floor((t / (1000 * 60 * 60)) % 24)
-    var days = Math.floor(t / (1000 * 60 * 60 * 24))
-    return {
-      'total': t,
-      'days': days,
-      'hours': minTwoDigits(hours),
-      'minutes': minTwoDigits(minutes),
-      'seconds': minTwoDigits(seconds)
-    }
-  }
-
-  function initializeClock (id, endtime) {
-    var clock = document.getElementById(id)
-    var timeinterval = setInterval(function () {
-      var t = getTimeRemaining(endtime)
-      clock.innerHTML = t.minutes + 'min' + t.seconds
-      if (t.total <= 0) {
-        clearInterval(timeinterval)
-      }
-    }, 1000)
-  }
-
-  function minTwoDigits (n) {
-    return (n < 10 ? '0' : '') + n
-  }
-
-  function dateAdd (date, interval, units) {
-    var ret = new Date(date) //don't change original date
-    var checkRollover = function () { if (ret.getDate() != date.getDate()) ret.setDate(0)}
-    switch (interval.toLowerCase()) {
-      case 'year'   :
-        ret.setFullYear(ret.getFullYear() + units)
-        checkRollover()
-        break
-      case 'quarter':
-        ret.setMonth(ret.getMonth() + 3 * units)
-        checkRollover()
-        break
-      case 'month'  :
-        ret.setMonth(ret.getMonth() + units)
-        checkRollover()
-        break
-      case 'week'   :
-        ret.setDate(ret.getDate() + 7 * units)
-        break
-      case 'day'    :
-        ret.setDate(ret.getDate() + units)
-        break
-      case 'hour'   :
-        ret.setTime(ret.getTime() + units * 3600000)
-        break
-      case 'minute' :
-        ret.setTime(ret.getTime() + units * 60000)
-        break
-      case 'second' :
-        ret.setTime(ret.getTime() + units * 1000)
-        break
-      default       :
-        ret = undefined
-        break
-    }
-    return ret
-  }
 
 
 
