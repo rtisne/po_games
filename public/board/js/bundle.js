@@ -29,7 +29,6 @@ socket.on('hydrateClient', function (data) {
 
 socket.on('newScore', function (data) {
   data = data[0]
-  console.log(data)
   switch (data.id) {
     case 1:
       window.scoreJ1.push(data)
@@ -47,7 +46,6 @@ socket.on('newScore', function (data) {
       var category = 3
       break
   }
-  console.log(category)
 
   $modal = $('.modal-frame')
   switch (category) {
@@ -58,14 +56,6 @@ socket.on('newScore', function (data) {
     case 1:
       $modal.find('h3').text('Top 3 au jeu ' + data.game)
       $modal.find('p').text(capitalize(data.firstname) + ' ' + data.lastname + ', avec un score de ' + data.score)
-      break
-    case 2:
-      // $modal.find('h3').text('Pas mal')
-      // $modal.find('p').text(capitalize(data.firstname) + ' ' + data.lastname + ' a obtenu un bon score de ' + data.score + ' au jeu ' + data.game)
-      break
-    case 4:
-      // $modal.find('h3').text('Ouille')
-      // $modal.find('p').text(capitalize(data.firstname) + ' ' + data.lastname + ' a tout raté, mauvais score de ' + data.score + ' au jeu ' + data.game)
       break
     default:
       return
@@ -121,7 +111,6 @@ socket.on('dateLimit', function (data) {
 socket.on('disconnect', function () {})
 
 socket.on('getImage', function(data){
-  console.log(data)
   $(".photograph>.box>img").attr("src", '/images/' + data)
 })
 

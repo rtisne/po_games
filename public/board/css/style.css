@@ -45,7 +45,7 @@ body{
 
 .section {
     background-color: #EF4527;
-    height: 68px;
+    height: 70px;
 }
 
 .image {
@@ -73,25 +73,42 @@ body{
     text-align: center;
 }
 
+.list-item{
+    display: flex;
+    align-items:center;
+    flex-grow: 2;
+    /*min-height:35px;*/
+    font-size: 19px;
+    font-weight: 600;
+
+}
+
 .rank {
-    display: inline-block;
-    margin-right: 10px;
     background-color: #999;
     color: white;
-    margin-left: -10px;
-    margin-bottom: -10px;
-    margin-top: -10px;
-    padding-top: 10px;
-    padding-bottom: 10px;
     text-align: center;
-    min-width: 50px;
+    min-width: 40px;
+    align-self: stretch;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.name {
+    margin-left: 5px;
+    margin-right:5px;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 .count {
-    float: right;
-    font-weight: 600;
+    margin-left: auto;
+    margin-right: 4px;
     font-size: 18px;
+    font-weight: 600;
+
 }
+
 .leaderboard {
     width: 100%;
     border: 1px solid #999;
@@ -118,7 +135,7 @@ li {
     color: #222222;
     font-weight: bold;
     font-size: 22px;
-    padding: 10px;
+    /*padding: 10px;*/
     border-top: 1px solid white;
     border-bottom: 1px solid white;
 }
@@ -138,21 +155,33 @@ li {
 }
 
 .pictures{
-    margin-top: 8%;
+    margin-bottom: 8%;
+}
+
+.pictures-list{
+    margin-top: 5% !important;
 }
 
 .faces{
     width: 98%;
 }
 
-.new::before {
+.new::after {
+    z-index: 100;
     content: "new";
     color: red;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
-    line-height: 160%;
     animation: blinker 2s linear infinite;
-    margin-right: 4px;
+    display: inline-block;
+    position: absolute;
+    margin-top: 10px;
+    margin-left: -16px;
+    -webkit-transform: rotate(-15deg);
+    -moz-transform: rotate(-15deg);
+    -o-transform: rotate(-15deg);
+    -ms-transform: rotate(-15deg);
+    transform: rotate(-15deg);
 }
 
 @keyframes blinker {

@@ -8,7 +8,7 @@ html
     body
         nav.navbar.navbar-inverse
             div.navbar-header
-                a(href="/back/").navbar-brand= ""
+                a(href="/").navbar-brand= ""
                 div.navbar-brand= "Liste des jeux"
         div.container
             div.list-group
@@ -18,5 +18,5 @@ html
                     li sorry, no games!
     script.
         function select(id) {
-            window.location.href = '/back/clients?id='+id;
+            window.location.href = '/clients?id='+id;
         }

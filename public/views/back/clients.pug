@@ -11,7 +11,7 @@ html
         div.alert.alert-success.alert-fixed(role='alert' style='display:none;')= "Le score a bien été enregistré"
         nav.navbar.navbar-inverse
             div.navbar-header
-                a(href="/back/").navbar-brand
+                a(href="/").navbar-brand
                     span.glyphicon.glyphicon-menu-left(aria-hidden='true')
                 div.navbar-brand= "Score"
 
@@ -186,7 +186,7 @@ html
 
               } else {
                 $('.alert-danger').text(donnees.message);
-                $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
+                $('.alert-danger').fadeIn('fast').delay(1000).fadeOut('fast');
               }
             } else {
               $.notify({
@@ -198,7 +198,7 @@ html
                 placement: {
                   from: "bottom",
                 },
-                timer: 2000,
+                timer: 1000,
                 animate: {
                   enter: 'animated fadeInDown',
                   exit: 'animated fadeOutUp'
@@ -243,7 +243,7 @@ html
                 console.log("Replacement Ok");
                 if (donnees.code) {
                   $('.alert-danger').text(donnees.message);
-                  $('.alert-danger').fadeIn('fast').delay(2000).fadeOut('fast');
+                  $('.alert-danger').fadeIn('fast').delay(1000).fadeOut('fast');
                 } else {
                   $.notify({
                     message: 'Le score de ' + donnees.name + ' a bien été enregistré'
@@ -254,7 +254,7 @@ html
                     placement: {
                       from: "bottom",
                     },
-                    timer: 2000,
+                    timer: 1000,
                     animate: {
                       enter: 'animated fadeInDown',
                       exit: 'animated fadeOutUp'

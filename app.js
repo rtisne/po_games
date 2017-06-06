@@ -38,7 +38,7 @@ app.use('/api/results', authentification)
 app.use('/api/results', results)
 app.use('/api/pictures', pictures)
 
-app.use('/back', back)
+app.use('/', back)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

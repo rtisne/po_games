@@ -46,7 +46,6 @@ pusher.hydrate = function (socket, data) {
 }
 
 pusher.requestShow = function (socket, data) {
-  console.log('\x1b[33m%s\x1b[0m', '~~~~ Sending pictures array...')
   socket.emit('showClient', data)
 }
 

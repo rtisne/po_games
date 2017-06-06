@@ -20,7 +20,7 @@ function initializeClock (id, endtime) {
   var clock = document.getElementById(id)
   var timeinterval = setInterval(function () {
     var t = getTimeRemaining(endtime)
-    clock.innerHTML = t.minutes + 'min' + t.seconds
+    clock.innerHTML = ((t.hours > 0)? t.hours + 'h': '') + t.minutes + 'm' + t.seconds
     if (t.total <= 0) {
       clearInterval(timeinterval)
     }
@@ -32,7 +32,7 @@ function minTwoDigits (n) {
 }
 
 function dateAdd (date, interval, units) {
-  var ret = new Date(date) //don't change original date
+  var ret = new Date(date)
   var checkRollover = function () { if (ret.getDate() != date.getDate()) ret.setDate(0)}
   switch (interval.toLowerCase()) {
     case 'year'   :
