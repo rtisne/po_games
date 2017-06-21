@@ -9,7 +9,7 @@ var socket = io(servUrl)
 socket.on('connect', function () {
   console.log('%c Connected to back-end! ', 'background: #222; color: #bada55')
   console.log('%c Asking for new show images... ', 'background: #222; color: #ffda55')
-  socket.emit('clientRequestRefresh')
+  //socket.emit('clientRequestRefresh')
 })
 
 socket.on('hydrateClient', function (data) {

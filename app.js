@@ -9,6 +9,7 @@ var results = require('./routes/results')
 var pictures = require('./routes/pictures')
 
 var back = require('./routes/back')
+var printable = require('./routes/printable')
 // include Model for token
 var Token = require('./models/token')
 
@@ -39,6 +40,7 @@ app.use('/api/results', results)
 app.use('/api/pictures', pictures)
 
 app.use('/', back)
+app.use('/print', printable)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

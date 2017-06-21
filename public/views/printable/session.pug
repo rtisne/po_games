@@ -1,0 +1,47 @@
+html
+    head
+        link(rel='stylesheet', href='/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/css/style.css')
+        script(src='/js/jquery.min.js')
+        script(src='/js/bootstrap.min.js')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+        style(type='text/css').
+            .image{
+                left: 40%!important;
+            }
+
+        style(type='text/css', media='print').
+            @page {
+                size: auto;
+                margin: 0;
+            }
+
+            html, body {
+                height: 100%;
+                overflow: hidden;
+            }
+            .section {
+                margin-top: 2%;
+            }
+
+    body(style="overflow:hidden;")
+        .section
+            .back
+                p
+                    a(href="/print")="Retour"
+            img.image(src="/img/logo.png")
+            .countdown
+                p
+                    a(href="#")(onclick="window.print();")="Imprimer"
+
+        .row.faces
+            .col-md-12.row.pictures-list
+                for picture in pictures
+                    .col-md-3.text-center.pictures(onclick="select("+ picture.session +")")
+                        img.rounded-circle.img-fluid.picture-people(src='../' + picture.path)
+                        img(style="position:absolute;z-index:3;right:20px;bottom:20px", width="80", height="80", src='../img/' + picture.smiley)
+
+                else
+                    .noImage Il n'y a pas encore d'image
+
+        script.

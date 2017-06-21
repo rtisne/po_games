@@ -10,6 +10,8 @@
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/style.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" type="text/css" media="print" href="css/bootstrap.min.css">
+
 
     <link href="jquery-ui/jquery-ui.css" rel="stylesheet" media="screen">
 
@@ -30,7 +32,7 @@
 <div class="section">
     <img class="image" src="img/logo.png">
     <div class="countdown">
-        <p>Temps restant: <span id="time">XXminXX</span></p>
+        <!--<p>Temps restant: <span id="time">XXminXX</span></p>-->
     </div>
 </div>
 
@@ -49,9 +51,9 @@
 
 <!--Faces-->
 <div class="row faces" style="display:none;">
-    <div class="col-md-8 row text-center" style="margin: 0 auto; margin-top: 40px;">
-        <h1 class="page_title">Vos plus belles têtes</h1>
-    </div>
+    <!--<div class="col-md-8 row text-center" style="margin: 0 auto; margin-top: 40px;">-->
+        <!--<h1 class="page_title">Vos plus belles têtes</h1>-->
+    <!--</div>-->
     <div class="col-md-12 row pictures-list" style="margin: 0 auto;">
     </div>
 
@@ -244,21 +246,30 @@
     generateImagesDom()
 
     socket.emit('getImage')
-    socket.emit('dateLimit')
-    socket.emit('clientRequestShow', {countPictures: nbImages})
-    launchLeaderScores()
+    $('.scoreboard').hide();
+    changeFacePage()
+    //socket.emit('dateLimit')
+    //socket.emit('clientRequestShow', {countPictures: nbImages})
+    //launchLeaderScores()
 
-    $modal = $('.modal-frame')
-    $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function (e) {
-      if ($modal.hasClass('state-leave')) {
-        $modal.removeClass('state-leave')
-      }
-    })
+//    $modal = $('.modal-frame')
+//    $modal.bind('webkitAnimationEnd oanimationend msAnimationEnd animationend', function (e) {
+//      if ($modal.hasClass('state-leave')) {
+//        $modal.removeClass('state-leave')
+//      }
+//    })
   });
+
+  function changeFacePage(){
+    toFaces()
+    window.setTimeout(function () {
+      changeFacePage()
+    }, frequency * 1000)
+  }
 
   function generateImagesDom() {
     for(var i = 0; i < nbImages; i++)
-        $('.pictures-list').append('<div class="col-md-3 text-center pictures"><img style="position:absolute;z-index:3;right:10px;bottom:10px" id="emo' + i + '" width="50" height="50" src="img/silhouette.png" alt="Generic placeholder image"> <img class="rounded-circle img-fluid" id="face' + i + '" src="img/silhouette.png" alt="Generic placeholder image"> </div>')
+        $('.pictures-list').append('<div class="col-md-3 text-center pictures"><img style="position:absolute;z-index:3;right:20px;bottom:20px" id="emo' + i + '" width="80" height="80" src="img/silhouette.png" alt="Generic placeholder image"> <img class="rounded-circle img-fluid picture-people" id="face' + i + '" src="img/silhouette.png" alt="Generic placeholder image"> </div>')
   }
 
 
@@ -284,16 +295,14 @@
 
   function toFaces() {
     socket.emit('clientRequestShow', {countPictures: nbImages})
-    socket.emit('clientRequestRefresh')
-    $('.scoreboard').hide('slide', {direction: 'left'}, function () {
+    $('.faces').hide('slide', {direction: 'left'}, function () {
       $('.faces').show('slide', {direction: 'right'})
     })
   }
 
   function toFaces2() {
     socket.emit('clientRequestShow', {countPictures: nbImages})
-    socket.emit('clientRequestRefresh')
-    $('.photograph').hide('slide', {direction: 'left'}, function () {
+    $('.faces').hide('slide', {direction: 'left'}, function () {
       $('.faces').show('slide', {direction: 'right'})
     })
   }

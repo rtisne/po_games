@@ -1,0 +1,1174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BookmarkManager">
+    <bookmark url="file://$PROJECT_DIR$/public/board/index.html" line="71" />
+    <bookmark url="file://$PROJECT_DIR$/public/board/css/style.css" line="47" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="9b1cf345-c5c5-40b1-a0dd-a1ba4c932c82" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Angry.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Crying.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Disappointed.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Fear.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Neutral.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Sad.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Smiling.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Smiling2.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/Surprised.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/disgust.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/img/silhouette.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/views/printable/session.pug" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/routes/printable.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/css/jqm-demos.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/album-af.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/album-ag.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/album-bb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/album-bk.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/album-hc.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/album-k.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/album-mg.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/album-ok.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/album-p.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/album-rh.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/album-ws.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/album-xx.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/apple.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/bg-pattern.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/bike.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/blackberry_10.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/bmw-thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/bmw.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/buenosaires.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/capetown.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/de.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/devices.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/fi.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/firefox-logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/firefox_os.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/galaxy_express.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/gb.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/gf.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/glyphish-icons/09-chat2.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/glyphish-icons/100-coffee.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/glyphish-icons/18-envelope.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/glyphish-icons/19-gear.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/glyphish-icons/21-skull.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/glyphish-icons/30-key.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/glyphish-icons/34-coffee.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/glyphish-icons/88-beermug.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/glyphish-icons/Read me first - license.txt" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/jquery-logo.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/landrover-thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/landrover.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/lumia_800.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/newyork.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/nexus_7.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/paris.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/phone_galaxy3.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/phone_iphone5.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/phone_lumia920.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/phone_onex.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/photo-landscape.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/photo-portrait.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/photo-run.jpeg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/seoul.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/sydney.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/tesla-thumb.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/tesla.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/tizen.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/img/us.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/js/h2widget.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/js/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/js/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/js/jqm-demos.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_assets/js/view-source.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/_search/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/button/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/collapsible/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/ajax-loader.gif" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/action-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/action-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/alert-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/alert-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-d-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-d-l-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-d-l-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-d-r-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-d-r-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-d-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-l-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-l-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-r-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-r-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-u-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-u-l-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-u-l-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-u-r-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-u-r-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/arrow-u-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/audio-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/audio-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/back-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/back-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/bars-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/bars-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/bullets-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/bullets-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/calendar-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/calendar-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/camera-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/camera-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/carat-d-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/carat-d-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/carat-l-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/carat-l-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/carat-r-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/carat-r-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/carat-u-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/carat-u-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/check-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/check-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/clock-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/clock-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/cloud-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/cloud-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/comment-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/comment-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/delete-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/delete-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/edit-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/edit-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/eye-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/eye-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/forbidden-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/forbidden-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/forward-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/forward-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/gear-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/gear-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/grid-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/grid-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/heart-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/heart-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/home-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/home-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/info-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/info-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/location-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/location-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/lock-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/lock-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/mail-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/mail-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/minus-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/minus-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/navigation-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/navigation-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/phone-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/phone-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/plus-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/plus-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/power-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/power-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/recycle-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/recycle-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/refresh-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/refresh-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/search-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/search-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/shop-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/shop-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/star-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/star-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/tag-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/tag-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/user-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/user-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/video-black.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-png/video-white.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/action-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/action-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/alert-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/alert-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-d-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-d-l-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-d-l-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-d-r-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-d-r-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-d-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-l-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-l-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-r-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-r-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-u-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-u-l-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-u-l-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-u-r-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-u-r-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/arrow-u-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/audio-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/audio-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/back-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/back-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/bars-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/bars-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/bullets-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/bullets-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/calendar-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/calendar-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/camera-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/camera-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/carat-d-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/carat-d-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/carat-l-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/carat-l-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/carat-r-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/carat-r-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/carat-u-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/carat-u-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/check-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/check-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/clock-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/clock-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/cloud-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/cloud-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/comment-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/comment-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/delete-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/delete-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/edit-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/edit-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/eye-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/eye-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/forbidden-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/forbidden-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/forward-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/forward-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/gear-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/gear-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/grid-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/grid-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/heart-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/heart-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/home-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/home-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/info-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/info-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/location-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/location-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/lock-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/lock-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/mail-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/mail-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/minus-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/minus-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/navigation-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/navigation-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/phone-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/phone-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/plus-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/plus-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/power-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/power-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/recycle-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/recycle-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/refresh-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/refresh-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/search-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/search-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/shop-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/shop-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/star-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/star-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/tag-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/tag-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/user-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/user-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/video-black.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/images/icons-svg/video-white.svg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/jquery.mobile-1.4.5.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/jquery.mobile.external-png-1.4.5.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/jquery.mobile.icons-1.4.5.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/jquery.mobile.inline-png-1.4.5.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/jquery.mobile.inline-svg-1.4.5.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/jquery.mobile.structure-1.4.5.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/css/themes/default/jquery.mobile.theme-1.4.5.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/datepicker/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/filterable/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/flipswitch/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/forms/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/grids/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/icons/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/intro/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/js/jquery.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/js/jquery.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/js/jquery.mobile-1.4.5.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/js/jquery.mobile-1.4.5.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/js/jquery.mobile-1.4.5.min.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/listview/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/loader/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/navbar/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/navigation/demo.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/navigation/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/alertevents-2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/alertevents-2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/alertevents-3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/alertevents-3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/alertevents.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/alertevents.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/docs.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/docs.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/logevents-2.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/logevents-2.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/logevents-3.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/logevents-3.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/logevents.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/page-events/logevents.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/pages/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/pages/samepagetransition.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/pages/startpage.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/panel-fixed/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/panel/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/popup/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/rangeslider/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/rwd/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/selectmenu/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/slider/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/swipe-list/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/swipe-page/buenosaires.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/swipe-page/capetown.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/swipe-page/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/swipe-page/newyork.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/swipe-page/paris.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/swipe-page/seoul.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/swipe-page/swipe-page.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/swipe-page/swipe-page.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/swipe-page/sydney.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/tabs/ajax-content-ignore.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/tabs/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/tabs/tabbed-content.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/textinput/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/toolbar/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/transitions/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/transitions/page-transitions-dialog.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/jquery-mobile/demos/transitions/page-transitions-page.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/models/picture.js" afterPath="$PROJECT_DIR$/models/picture.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/board/css/style.css" afterPath="$PROJECT_DIR$/public/board/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/board/index.html" afterPath="$PROJECT_DIR$/public/board/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/board/js/bundle.js" afterPath="$PROJECT_DIR$/public/board/js/bundle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/back/index.pug" afterPath="$PROJECT_DIR$/public/views/back/index.pug" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/pictures.js" afterPath="$PROJECT_DIR$/routes/pictures.js" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="po_games" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="picture.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/models/picture.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bundle.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/board/js/bundle.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="815">
+              <caret line="98" column="7" lean-forward="false" selection-start-line="72" selection-start-column="6" selection-end-line="98" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/printable/index.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="441">
+              <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="27" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/css/style.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="676">
+              <caret line="209" column="21" lean-forward="false" selection-start-line="209" selection-start-column="21" selection-end-line="209" selection-end-column="21" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="session.pug" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/views/printable/session.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="676">
+              <caret line="44" column="28" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="printable.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/routes/printable.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="500">
+              <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+              <folding>
+                <element signature="e#0#43#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="Pug File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>h3</find>
+      <find>16px</find>
+      <find>r</find>
+      <find>EEE8D6</find>
+      <find>socket.emit(&quot;clientRequestRefresh&quot;);</find>
+      <find>vosp</find>
+      <find>Le sco</find>
+      <find>le score</find>
+      <find>console.log</find>
+      <find>window.setTimeout(function () {</find>
+      <find>focus</find>
+      <find>window.setTimeout(function</find>
+      <find>temps</find>
+      <find>countdown</find>
+      <find>modal</find>
+      <find>back</find>
+      <find>console</find>
+      <find>new</find>
+      <find>rank</find>
+      <find>li</find>
+      <find>freq</find>
+      <find>picture</find>
+      <find>pictures-list</find>
+      <find>10</find>
+      <find>position:absolute;z-index:3</find>
+      <find>print</find>
+      <find>faces</find>
+      <find>pictures</find>
+      <find>countd</find>
+      <find>calc</find>
+    </findStrings>
+  </component>
+  <component name="FrameworkCommandLineHistory">
+    <commandsHistory>
+      <command text="npm run dev" />
+      <command text="npm install jquery-ui-dist --save" />
+      <command text="npm run dev" />
+      <command text="npm install jquery-mobile --save" />
+      <command text="npm run dev" />
+      <command text="standard --verbiose --fix" />
+    </commandsHistory>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public/css/clients.css" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/models/dateLimit.js" />
+        <option value="$PROJECT_DIR$/models/result.js" />
+        <option value="$PROJECT_DIR$/public/board/js/date.js" />
+        <option value="$PROJECT_DIR$/routes/results.js" />
+        <option value="$PROJECT_DIR$/public/views/back/clients.pug" />
+        <option value="$PROJECT_DIR$/bin/pusher.js" />
+        <option value="$PROJECT_DIR$/public/board/js/bundle.js" />
+        <option value="$PROJECT_DIR$/public/board/css/style.css" />
+        <option value="$PROJECT_DIR$/routes/pictures.js" />
+        <option value="$PROJECT_DIR$/public/board/index.html" />
+        <option value="$PROJECT_DIR$/public/printable/js/bundle.js" />
+        <option value="$PROJECT_DIR$/public/printable/index.html" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/public/views/printable/index.html" />
+        <option value="$PROJECT_DIR$/public/views/back/index.pug" />
+        <option value="$PROJECT_DIR$/models/picture.js" />
+        <option value="$PROJECT_DIR$/routes/printable.js" />
+        <option value="$PROJECT_DIR$/public/views/printable/session.pug" />
+        <option value="$PROJECT_DIR$/public/views/printable/index.pug" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/node_modules" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="2" />
+    <option name="width" value="1694" />
+    <option name="height" value="1006" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="false" id="Update" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="routes" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="printable" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="po_games" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="bin" />
+              <option name="myItemType" value="com.jetbrains.php.projectView.PhpTreeStructureProvider$1" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="C:\Users\rtisne\Documents\po_games\node_modules\eslint" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.selected.package.standard" value="C:\Users\rtisne\Documents\po_games\node_modules\standard" />
+    <property name="standardjs.codestyle.accepted" value="true" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\rtisne\Documents\po_games\public\img" />
+      <recent name="C:\Users\rtisne\Documents\po_games\public\views\printable" />
+      <recent name="C:\Users\rtisne\Documents\po_games\public\printable" />
+      <recent name="C:\Users\rtisne\Documents\po_games\public\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\rtisne\Documents\po_games\public" />
+      <recent name="C:\Users\rtisne\Documents\po_games\public\css" />
+      <recent name="C:\Users\rtisne\Documents\po_games\public\views" />
+      <recent name="C:\Users\rtisne\Documents\po_games\public\board" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CodeceptionConfigurationType" factoryName="Codeception">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerJest" factoryName="Jest">
+      <node-interpreter value="project" />
+      <working-dir value="" />
+      <envs />
+      <scope-kind value="ALL" />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavaScriptTestRunnerProtractor" factoryName="Protractor">
+      <config-file value="" />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="NodeJSConfigurationType" factoryName="Node.js" path-to-node="project" working-dir="">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpSpecConfigurationType" factoryName="PHPSpec">
+      <PhpTestRunnerSettings />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run" />
+      <scripts />
+      <node-interpreter value="project" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <working-directory />
+      <pass-parent-env>true</pass-parent-env>
+      <envs />
+      <ui />
+      <extra-mocha-options />
+      <test-kind>DIRECTORY</test-kind>
+      <test-directory />
+      <recursive>false</recursive>
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="9b1cf345-c5c5-40b1-a0dd-a1ba4c932c82" name="Default" comment="" />
+      <created>1493710172496</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1493710172496</updated>
+      <workItem from="1493710175358" duration="61002000" />
+      <workItem from="1493967853966" duration="19700000" />
+      <workItem from="1494314444420" duration="15357000" />
+      <workItem from="1494336060957" duration="177000" />
+      <workItem from="1494412974225" duration="26000" />
+      <workItem from="1494418660813" duration="15960000" />
+      <workItem from="1494579833650" duration="117000" />
+      <workItem from="1494579977214" duration="20000" />
+      <workItem from="1496750812283" duration="7020000" />
+      <workItem from="1496757916074" duration="4696000" />
+      <workItem from="1496820829196" duration="107000" />
+      <workItem from="1496820990138" duration="5753000" />
+    </task>
+    <task id="LOCAL-00001" summary="Adding slide between modules">
+      <created>1493749313129</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1493749313129</updated>
+    </task>
+    <task id="LOCAL-00002" summary="SOme modifs">
+      <created>1493824915592</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1493824915592</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Some modifs">
+      <created>1493902381870</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1493902381870</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Some modifs">
+      <created>1493910328726</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1493910328726</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Some modifs">
+      <created>1494333685120</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1494333685120</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Some modifs">
+      <created>1496750871482</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1496750871482</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="129935000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="2" width="1694" height="1006" extended-state="1" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19630072" sideWeight="0.49603623" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28100988" sideWeight="0.50416666" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17672887" sideWeight="0.496875" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16111708" sideWeight="0.50396377" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16111708" sideWeight="0.50396377" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Command Line Tools Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28100988" sideWeight="0.49583334" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3413831" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32930845" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="processedProjectFiles" value="true" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.pug" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <MESSAGE value="Adding slide between modules" />
+    <MESSAGE value="SOme modifs" />
+    <MESSAGE value="Some modifs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Some modifs" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/board/images/colere_149399581643779585.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/board/images/images.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/board/images/vaincre-timidite-soiree.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/colere_149398786039136446.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/colere_149399581643779585.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/colere_149399663130861789.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/colere_uplTheFile149398532680040632.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/degout_149398786039890098.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/peur_149398786041713669.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/surprise_149399663180953295.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/tristesse_149399472391737259.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/tristesse_149399428424771582.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/tristesse_149398786042275322.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/surprise_14939878604198041.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/peur_14939966316649390.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/neutre_149398786040919772.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/joie_149399428414258630.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/joie_149398786040411129.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/joie_149399472373141994.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/joie_149399581655330276.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/joie_149399663140193002.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/uploads/joie_uplTheFile149398532689426741.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/board/js/date.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="672">
+          <caret line="34" column="26" lean-forward="false" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/back/clients.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="188" column="57" lean-forward="false" selection-start-line="188" selection-start-column="57" selection-end-line="188" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bin/serv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="731">
+          <caret line="43" column="15" lean-forward="false" selection-start-line="43" selection-start-column="15" selection-end-line="43" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/dateLimit.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/game.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/board/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="5" column="2475" lean-forward="false" selection-start-line="5" selection-start-column="2470" selection-end-line="5" selection-end-column="2475" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/printable/js/date.js" />
+    <entry file="file://$PROJECT_DIR$/public/printable/js/bundle.js" />
+    <entry file="file://$PROJECT_DIR$/bin/pusher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="39" column="6" lean-forward="true" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/member.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="35" lean-forward="false" selection-start-line="3" selection-start-column="27" selection-end-line="3" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/printable/index.html" />
+    <entry file="file://$PROJECT_DIR$/public/img/smile.jpg" />
+    <entry file="file://$PROJECT_DIR$/public/img/smiley.jpg" />
+    <entry file="file://$PROJECT_DIR$/models/result.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="10" column="135" lean-forward="false" selection-start-line="10" selection-start-column="135" selection-end-line="10" selection-end-column="135" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/clients.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="567">
+          <caret line="27" column="39" lean-forward="false" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/board/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="271" column="143" lean-forward="false" selection-start-line="271" selection-start-column="143" selection-end-line="271" selection-end-column="160" />
+          <folding>
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#3;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1496757145847" expanded="true" signature="8141:8191" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/board/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="60" column="17" lean-forward="false" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/results.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-886">
+          <caret line="28" column="34" lean-forward="false" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/back.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="12" column="4" lean-forward="false" selection-start-line="6" selection-start-column="1" selection-end-line="12" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/members.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/pictures.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-46">
+          <caret line="37" column="11" lean-forward="false" selection-start-line="37" selection-start-column="11" selection-end-line="37" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/back/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="18" column="4" lean-forward="false" selection-start-line="18" selection-start-column="4" selection-end-line="21" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/board/js/bundle.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="815">
+          <caret line="98" column="7" lean-forward="false" selection-start-line="72" selection-start-column="6" selection-end-line="98" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/picture.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="294">
+          <caret line="14" column="4" lean-forward="false" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/printable/index.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="441">
+          <caret line="21" column="27" lean-forward="false" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="209" column="21" lean-forward="false" selection-start-line="209" selection-start-column="21" selection-end-line="209" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/views/printable/session.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="676">
+          <caret line="44" column="28" lean-forward="false" selection-start-line="44" selection-start-column="21" selection-end-line="44" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/printable.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="500">
+          <caret line="47" column="37" lean-forward="true" selection-start-line="47" selection-start-column="37" selection-end-line="47" selection-end-column="37" />
+          <folding>
+            <element signature="e#0#43#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

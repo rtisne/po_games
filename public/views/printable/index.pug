@@ -1,0 +1,30 @@
+html
+    head
+        link(rel='stylesheet', href='/css/bootstrap.min.css')
+        link(rel='stylesheet', href='/css/style.css')
+        script(src='/js/jquery.min.js')
+        script(src='/js/bootstrap.min.js')
+        meta(name='viewport' content='width=device-width, initial-scale=1')
+    body
+       .section
+           img.image(src="/img/logo.png")
+           .countdown
+               p
+                   a(href="#")(onclick="location.reload();")="Rafraîchir"
+
+       .row.faces
+           .col-md-12.row.pictures-list
+               for picture in pictures
+                   a.col-md-2.text-center.pictures(onclick="select("+ picture.session +")")
+                       img.rounded-circle.img-fluid.picture-people(src='../' + picture.path)
+
+               else
+                   .noImage Il n'y a pas encore d'image
+
+    script.
+      function select(id) {
+        window.location.href = '/print/session?id='+id;
+      }
+
+
+//<div class="col-md-3 text-center pictures"><img style="position:absolute;z-index:3;right:20px;bottom:20px" id="emo' + i + '" width="80" height="80" src="img/silhouette.png" alt="Generic placeholder image"> <img class="rounded-circle img-fluid picture-people" id="face' + i + '" src="img/silhouette.png" alt="Generic placeholder image"> </div>

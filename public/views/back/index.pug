@@ -13,7 +13,7 @@ html
         div.container
             div.list-group
                 for game in games
-                    button.list-group-item(onclick="select("+ game.id +")")= game.name
+                    button.list-group-item(onclick="select("+ game.id +")")= 'http://localhost:8090/' + game.name
                 else
                     li sorry, no games!
     script.

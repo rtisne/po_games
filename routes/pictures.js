@@ -23,17 +23,25 @@ var upload = multer({
 
 router.post('/', [upload.any(), function (req, res) {
   if (req.files) {
-    req.files.forEach(function (file) {
-      try {
-        Picture.addPicture(file, function (err, count) {
-          if (err) {
-            res.json(err)
+    try {
+      Picture.getMaxSession(function (err, maxValue) {
+        var nextValue = maxValue[0].max + 1
+        req.files.forEach(function (file) {
+          try {
+            Picture.addPicture(file, nextValue, function (err, count) {
+              if (err) {
+                res.json(err)
+              }
+            })
+          } catch (e) {
+            return res.end()
           }
         })
-      } catch (e) {
-        return res.end()
-      }
-    })
+        return res.json('ok')
+      })
+    } catch (e) {
+      return res.end()
+    }
   }
   res.json('ok')
 }])
